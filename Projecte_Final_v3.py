@@ -367,7 +367,7 @@ with col_Data_2:
 # =============================================================================
         with open("Ideal_Data_CSV_PQ_Capability_Plots.py") as file:
             exec(file.read())
-            
+            plt.savefig("PQ_Capability.png")
         # =============================================================================
 #         var_columns = WTGs_LVRT_HVRT.groupby.iloc[2:,1]
 #         print (var_columns)
