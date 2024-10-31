@@ -5,5 +5,3 @@ pandas
 
 subprocess
 os
-#python -m pip install "matplotlib==3.9.1"
-#python -m pip install --only-binary=:all: --pre --upgrade --extra-index-url https://pypi.anaconda.org/scientific-python-nightly-wheels/simple contourpy
