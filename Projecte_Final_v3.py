@@ -68,8 +68,9 @@ import os
         
 #     return calculated_active_power,calculated_reactive_power
 
-st.cache_data
+@st.cache_data
 def csv (df_WTG_File, WTGs_analysis, WTGs_LVRT_HVRT):
+    
 	return df_WTG_File,WTGs_analysis, WTGs_LVRT_HVRT
 
 # =============================================================================
