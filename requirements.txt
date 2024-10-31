@@ -1,4 +1,4 @@
-matplotlib==3.9.1
+matplotlib==3.7
 matplotlib.pyplot
 numpy
 pandas
