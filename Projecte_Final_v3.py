@@ -10,10 +10,9 @@ import math
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-
-@st.cache_data
-
-
+# importing subprocess module 
+import subprocess
+import os
 
 # =============================================================================
 # # #------ Declaration of Definition -------
@@ -69,7 +68,9 @@ import pandas as pd
         
 #     return calculated_active_power,calculated_reactive_power
 
-
+st.cache_data
+def csv (df_WTG_File, WTGs_analysis, WTGs_LVRT_HVRT):
+	return df_WTG_File,WTGs_analysis, WTGs_LVRT_HVRT
 
 # =============================================================================
 # # #------- Variables -------
@@ -299,8 +300,6 @@ with col_Data_2:
                 st.write("You have entered: " +  text)
                 st.write(text_input)
 
-
-
     elif is_wind == "FRT for LVRT":
         
         ####--Create a Figure to be add data
@@ -365,9 +364,19 @@ with col_Data_2:
 # =============================================================================
 #         # opening file_1.py and reading it with read() and executing if with exec()
 # =============================================================================
-        with open("Ideal_Data_CSV_PQ_Capability_Plots.py") as file:
-            exec(file.read())
-            plt.savefig("PQ_Capability.png")
+        #with open("Ideal_Data_CSV_PQ_Capability_Plots.py") as file:
+         #   exec(file.read())
+          #  plt.savefig("PQ_Capability.png")
+
+       # =============================================================================
+        #         # opening file_1.py and reading it with read() and executing if with exec()
+        # =============================================================================
+        #subprocess.run(["python", "Ideal_Data_CSV_PQ_Capability_Plots.py"])
+        # running other file using run()
+        os.system("Ideal_Data_CSV_PQ_Capability_Plots.py")
+         
+        plt.savefig("PQ_Capability.png")
+        
         # =============================================================================
 #         var_columns = WTGs_LVRT_HVRT.groupby.iloc[2:,1]
 #         print (var_columns)
