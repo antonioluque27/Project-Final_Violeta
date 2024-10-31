@@ -1,5 +1,5 @@
 matplotlib==3.7
-matplotlib.pyplot
+
 numpy
 pandas
 
