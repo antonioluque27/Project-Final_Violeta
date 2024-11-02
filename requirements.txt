@@ -2,6 +2,7 @@ streamlit==1.24.1
 pandas>2.0
 numpy<=1.25.3
 s3fs==0.4.*
+OS === MacOS
 
 build-essential
 pkg-config
