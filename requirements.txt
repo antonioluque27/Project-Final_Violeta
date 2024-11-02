@@ -199,7 +199,7 @@ nltk #@ file:///opt/conda/conda-bld/nltk_1645628263994/work
 notebook #@ file:///C:/b/abs_ca13hqvuzw/croot/notebook_1668179888546/work
 notebook_shim #@ file:///C:/b/abs_ebfczttg6x/croot/notebook-shim_1668160590914/work
 numba #@ file:///C:/b/abs_e53pp2e4k7/croot/numba_1670258349527/work
-numexpr @ file:///C:/b/abs_a7kbak88hk/croot/numexpr_1668713882979/work
+numexpr #@ file:///C:/b/abs_a7kbak88hk/croot/numexpr_1668713882979/work
 numpy #@ file:///C:/b/abs_datssh7cer/croot/numpy_and_numpy_base_1672336199388/work
 numpydoc #@ file:///C:/b/abs_cfdd4zxbga/croot/numpydoc_1668085912100/work
 openpyxl==3.0.10
