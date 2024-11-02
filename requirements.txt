@@ -284,7 +284,7 @@ pywin32-ctypes #@ file:///C:/ci_310/pywin32-ctypes_1642657835512/work
 pywinpty #@ file:///C:/b/abs_73vshmevwq/croot/pywinpty_1677609966356/work/target/wheels/pywinpty-2.0.10-cp310-none-win_amd64.whl
 PyYAML #@ file:///C:/b/abs_d0g7dqt2xw/croot/pyyaml_1670514768165/work
 pyzmq #@ file:///C:/b/abs_89aq69t0up/croot/pyzmq_1705605705281/work
-QDarkStyle# @ file:///tmp/build/80754af9/qdarkstyle_1617386714626/work
+QDarkStyle # @ file:///tmp/build/80754af9/qdarkstyle_1617386714626/work
 qstylizer #@ file:///C:/b/abs_ef86cgllby/croot/qstylizer_1674008538857/work/dist/qstylizer-0.2.2-py2.py3-none-any.whl
 QtAwesome #@ file:///C:/b/abs_c5evilj98g/croot/qtawesome_1674008690220/work
 qtconsole #@ file:///C:/b/abs_5bap7f8n0t/croot/qtconsole_1674008444833/work
