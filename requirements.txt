@@ -21,8 +21,8 @@ hashlib
 #aext-share-notebook @ file:///C:/b/abs_4bhc14ko2x/croot/aext-share-notebook_1717059348177/work
 #aext-share-notebook-server @ file:///C:/b/abs_2b3c16a8t0/croot/aext-share-notebook-server_1717057990383/work
 #aext-shared @ file:///C:/b/abs_1ex0tj8g9m/croot/aext-shared_1716991146845/work
+#alabaster @ file:///home/ktietz/src/ci/alabaster_1611921544520/work
 
-alabaster @ file:///home/ktietz/src/ci/alabaster_1611921544520/work
 altair==5.4.1
 anaconda-anon-usage @ file:///C:/b/abs_c3w_h1zzjg/croot/anaconda-anon-usage_1710965204622/work
 anaconda-client==1.11.1
