@@ -8,8 +8,11 @@ pkg-config
 default-libmysqlclient-dev
 
 certifi
+Pillow
+Image
+hashlib
 
-aext-assistant @ file:///C:/b/abs_7e0qjcige6/croot/aext-assistant_1717062202219/work
+#aext-assistant @ file:///C:/b/abs_7e0qjcige6/croot/aext-assistant_1717062202219/work
 aext-assistant-server @ file:///C:/b/abs_261y2c9vsm/croot/aext-assistant-server_1717060019302/work
 aext-core @ file:///C:/b/abs_1e882xlg8y/croot/aext-core_1717056431204/work
 aext-core-server @ file:///C:/b/abs_75cyq1o65l/croot/aext-core-server_1717054650767/work
