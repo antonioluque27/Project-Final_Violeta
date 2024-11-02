@@ -14,73 +14,73 @@ hashlib
 
 aext-assistant #@ file:///C:/b/abs_7e0qjcige6/croot/aext-assistant_1717062202219/work
 aext-assistant-server #@ file:///C:/b/abs_261y2c9vsm/croot/aext-assistant-server_1717060019302/work
-#aext-core @ file:///C:/b/abs_1e882xlg8y/croot/aext-core_1717056431204/work
-#aext-core-server @ file:///C:/b/abs_75cyq1o65l/croot/aext-core-server_1717054650767/work
-#aext-panels @ file:///C:/b/abs_44bc4hv663/croot/aext-panels_1717062218055/work
-#aext-panels-server @ file:///C:/b/abs_7f9_48fhp3/croot/aext-panels-server_1717060738001/work
-#aext-share-notebook @ file:///C:/b/abs_4bhc14ko2x/croot/aext-share-notebook_1717059348177/work
-#aext-share-notebook-server @ file:///C:/b/abs_2b3c16a8t0/croot/aext-share-notebook-server_1717057990383/work
-#aext-shared @ file:///C:/b/abs_1ex0tj8g9m/croot/aext-shared_1716991146845/work
-#alabaster @ file:///home/ktietz/src/ci/alabaster_1611921544520/work
+aext-core #@ file:///C:/b/abs_1e882xlg8y/croot/aext-core_1717056431204/work
+aext-core-server #@ file:///C:/b/abs_75cyq1o65l/croot/aext-core-server_1717054650767/work
+aext-panels #@ file:///C:/b/abs_44bc4hv663/croot/aext-panels_1717062218055/work
+aext-panels-server #@# file:///C:/b/abs_7f9_48fhp3/croot/aext-panels-server_1717060738001/work
+aext-share-notebook #@ file:///C:/b/abs_4bhc14ko2x/croot/aext-share-notebook_1717059348177/work
+aext-share-notebook-server #@ file:///C:/b/abs_2b3c16a8t0/croot/aext-share-notebook-server_1717057990383/work
+aext-shared #@ file:///C:/b/abs_1ex0tj8g9m/croot/aext-shared_1716991146845/work
+alabaster #@ file:///home/ktietz/src/ci/alabaster_1611921544520/work
 
 altair==5.4.1
-#anaconda-anon-usage @ file:///C:/b/abs_c3w_h1zzjg/croot/anaconda-anon-usage_1710965204622/work
+anaconda-anon-usage #@ file:///C:/b/abs_c3w_h1zzjg/croot/anaconda-anon-usage_1710965204622/work
 anaconda-client==1.11.1
-#anaconda-cloud-auth @ file:///C:/b/abs_27x7fzodlx/croot/anaconda-cloud-auth_1712794918678/work
-#anaconda-navigator @ file:///C:/b/abs_a5gzce6vy0/croot/anaconda-navigator_1727709729163/work
-#anaconda-project @ file:///C:/Windows/TEMP/abs_91fu4tfkih/croots/recipe/anaconda-project_1660339890874/work
-#anyio @ file:///C:/ci/anyio_1644481856696/work/dist
+anaconda-cloud-auth#@ file:///C:/b/abs_27x7fzodlx/croot/anaconda-cloud-auth_1712794918678/work
+anaconda-navigator #@ file:///C:/b/abs_a5gzce6vy0/croot/anaconda-navigator_1727709729163/work
+anaconda-project# @ file:///C:/Windows/TEMP/abs_91fu4tfkih/croots/recipe/anaconda-project_1660339890874/work
+anyio #@ file:///C:/ci/anyio_1644481856696/work/dist
 appdirs==1.4.4
-#argon2-cffi @ file:///opt/conda/conda-bld/argon2-cffi_1645000214183/work
-#argon2-cffi-bindings @ file:///C:/ci/argon2-cffi-bindings_1644569876605/work
-#arrow @ file:///C:/b/abs_cal7u12ktb/croot/arrow_1676588147908/work
-#astroid @ file:///C:/b/abs_d4lg3_taxn/croot/astroid_1676904351456/work
-#astropy @ file:///C:/ci/astropy_1657719642921/work
-#asttokens @ file:///opt/conda/conda-bld/asttokens_1646925590279/work
-#async-lru @ file:///C:/b/abs_e0hjkvwwb5/croot/async-lru_1699554572212/work
+argon2-cffi# @ file:///opt/conda/conda-bld/argon2-cffi_1645000214183/work
+argon2-cffi-bindings #@ file:///C:/ci/argon2-cffi-bindings_1644569876605/work
+arrow #@ file:///C:/b/abs_cal7u12ktb/croot/arrow_1676588147908/work
+astroid #@ file:///C:/b/abs_d4lg3_taxn/croot/astroid_1676904351456/work
+astropy #@ file:///C:/ci/astropy_1657719642921/work
+asttokens# @ file:///opt/conda/conda-bld/asttokens_1646925590279/work
+async-lru #@ file:///C:/b/abs_e0hjkvwwb5/croot/async-lru_1699554572212/work
 atomicwrites==1.4.0
-#attrs @ file:///C:/b/abs_24xj44kobp/croot/attrs_1729089434205/work
-#Automat @ file:///tmp/build/80754af9/automat_1600298431173/work
-#autopep8 @ file:///opt/conda/conda-bld/autopep8_1650463822033/work
-#Babel @ file:///C:/b/abs_a2shv_3tqi/croot/babel_1671782804377/work
-#backcall @ file:///home/ktietz/src/ci/backcall_1611930011877/work
+attrs #@ file:///C:/b/abs_24xj44kobp/croot/attrs_1729089434205/work
+Automat# @ file:///tmp/build/80754af9/automat_1600298431173/work
+autopep8 #@ file:///opt/conda/conda-bld/autopep8_1650463822033/work
+Babel #@ file:///C:/b/abs_a2shv_3tqi/croot/babel_1671782804377/work
+backcall #@ file:///home/ktietz/src/ci/backcall_1611930011877/work
 backports.functools-lru-cache #@ file:///tmp/build/80754af9/backports.functools_lru_cache_1618170165463/work
 backports.tempfile #@ file:///home/linux1/recipes/ci/backports.tempfile_1610991236607/work
 backports.weakref==1.0.post1
-bcrypt @ file:///C:/Windows/Temp/abs_36kl66t_aw/croots/recipe/bcrypt_1659554334050/work
-beautifulsoup4 @ file:///C:/ci/beautifulsoup4_1650293028159/work
-binaryornot @ file:///tmp/build/80754af9/binaryornot_1617751525010/work
-black @ file:///C:/ci/black_1660221726201/work
-bleach @ file:///opt/conda/conda-bld/bleach_1641577558959/work
+bcrypt #@ file:///C:/Windows/Temp/abs_36kl66t_aw/croots/recipe/bcrypt_1659554334050/work
+beautifulsoup4# @ file:///C:/ci/beautifulsoup4_1650293028159/work
+binaryornot #@ file:///tmp/build/80754af9/binaryornot_1617751525010/work
+black# @ file:///C:/ci/black_1660221726201/work
+bleach #@ file:///opt/conda/conda-bld/bleach_1641577558959/work
 blinker==1.8.2
-bokeh @ file:///C:/Windows/TEMP/abs_4a259bc2-ed05-4a1f-808e-ac712cc0900cddqp8sp7/croots/recipe/bokeh_1658136660686/work
-boltons @ file:///C:/b/abs_707eo7c09t/croot/boltons_1677628723117/work
-Bottleneck @ file:///C:/Windows/Temp/abs_3198ca53-903d-42fd-87b4-03e6d03a8381yfwsuve8/croots/recipe/bottleneck_1657175565403/work
+bokeh #@ file:///C:/Windows/TEMP/abs_4a259bc2-ed05-4a1f-808e-ac712cc0900cddqp8sp7/croots/recipe/bokeh_1658136660686/work
+boltons# @ file:///C:/b/abs_707eo7c09t/croot/boltons_1677628723117/work
+Bottleneck# @ file:///C:/Windows/Temp/abs_3198ca53-903d-42fd-87b4-03e6d03a8381yfwsuve8/croots/recipe/bottleneck_1657175565403/work
 brotlipy==0.7.0
 cachetools==5.5.0
-certifi @ file:///C:/b/abs_1fw_exq1si/croot/certifi_1725551736618/work/certifi
-cffi @ file:///C:/b/abs_49n3v2hyhr/croot/cffi_1670423218144/work
-chardet @ file:///C:/ci_310/chardet_1642114080098/work
-charset-normalizer @ file:///tmp/build/80754af9/charset-normalizer_1630003229654/work
-click @ file:///C:/ci/click_1646056762388/work
-cloudpickle @ file:///tmp/build/80754af9/cloudpickle_1632508026186/work
+certifi #@ file:///C:/b/abs_1fw_exq1si/croot/certifi_1725551736618/work/certifi
+cffi #@ file:///C:/b/abs_49n3v2hyhr/croot/cffi_1670423218144/work
+chardet# @ file:///C:/ci_310/chardet_1642114080098/work
+charset-normalizer #@ file:///tmp/build/80754af9/charset-normalizer_1630003229654/work
+click #@ file:///C:/ci/click_1646056762388/work
+cloudpickle #@ file:///tmp/build/80754af9/cloudpickle_1632508026186/work
 clyent==1.2.2
-colorama @ file:///C:/b/abs_a9ozq0l032/croot/colorama_1672387194846/work
-colorcet @ file:///C:/b/abs_46vyu0rpdl/croot/colorcet_1668084513237/work
-comm @ file:///C:/b/abs_1419earm7u/croot/comm_1671231131638/work
+colorama #@ file:///C:/b/abs_a9ozq0l032/croot/colorama_1672387194846/work
+colorcet #@ file:///C:/b/abs_46vyu0rpdl/croot/colorcet_1668084513237/work
+comm #@ file:///C:/b/abs_1419earm7u/croot/comm_1671231131638/work
 conda==23.3.1
 conda-build==3.23.3
-conda-content-trust @ file:///C:/Windows/TEMP/abs_4589313d-fc62-4ccc-81c0-b801b4449e833j1ajrwu/croots/recipe/conda-content-trust_1658126379362/work
-conda-pack @ file:///tmp/build/80754af9/conda-pack_1611163042455/work
-conda-package-handling @ file:///C:/b/abs_fcga8w0uem/croot/conda-package-handling_1672865024290/work
+conda-content-trust #@ file:///C:/Windows/TEMP/abs_4589313d-fc62-4ccc-81c0-b801b4449e833j1ajrwu/croots/recipe/conda-content-trust_1658126379362/work
+conda-pack #@ file:///tmp/build/80754af9/conda-pack_1611163042455/work
+conda-package-handling #@ file:///C:/b/abs_fcga8w0uem/croot/conda-package-handling_1672865024290/work
 conda-repo-cli==1.0.27
-conda-token @ file:///Users/paulyim/miniconda3/envs/c3i/conda-bld/conda-token_1662660369760/work
+conda-token #@ file:///Users/paulyim/miniconda3/envs/c3i/conda-bld/conda-token_1662660369760/work
 conda-verify==3.4.2
-conda_package_streaming @ file:///C:/b/abs_0e5n5hdal3/croot/conda-package-streaming_1670508162902/work
+conda_package_streaming# @ file:///C:/b/abs_0e5n5hdal3/croot/conda-package-streaming_1670508162902/work
 constantly==15.1.0
-contourpy @ file:///C:/b/abs_d5rpy288vc/croots/recipe/contourpy_1663827418189/work
-cookiecutter @ file:///opt/conda/conda-bld/cookiecutter_1649151442564/work
-cryptography @ file:///C:/b/abs_8ecplyc3n2/croot/cryptography_1677533105000/work
+contourpy #@ file:///C:/b/abs_d5rpy288vc/croots/recipe/contourpy_1663827418189/work
+cookiecutter #@ file:///opt/conda/conda-bld/cookiecutter_1649151442564/work
+cryptography #@ file:///C:/b/abs_8ecplyc3n2/croot/cryptography_1677533105000/work
 cssselect==1.1.0
 cycler @ file:///tmp/build/80754af9/cycler_1637851556182/work
 cytoolz @ file:///C:/b/abs_61m9vzb4qh/croot/cytoolz_1667465938275/work
