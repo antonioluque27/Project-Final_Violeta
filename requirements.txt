@@ -26,7 +26,7 @@ alabaster #@ file:///home/ktietz/src/ci/alabaster_1611921544520/work
 altair==5.4.1
 anaconda-anon-usage #@ file:///C:/b/abs_c3w_h1zzjg/croot/anaconda-anon-usage_1710965204622/work
 anaconda-client==1.11.1
-anaconda-cloud-auth#@ file:///C:/b/abs_27x7fzodlx/croot/anaconda-cloud-auth_1712794918678/work
+anaconda-cloud-auth #@ file:///C:/b/abs_27x7fzodlx/croot/anaconda-cloud-auth_1712794918678/work
 anaconda-navigator #@ file:///C:/b/abs_a5gzce6vy0/croot/anaconda-navigator_1727709729163/work
 anaconda-project# @ file:///C:/Windows/TEMP/abs_91fu4tfkih/croots/recipe/anaconda-project_1660339890874/work
 anyio #@ file:///C:/ci/anyio_1644481856696/work/dist
