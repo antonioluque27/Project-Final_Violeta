@@ -174,7 +174,7 @@ markdown-it-py==3.0.0
 MarkupSafe #@ file:///C:/ci/markupsafe_1654508036328/work
 matplotlib #@ file:///C:/b/abs_b2d7uv90hg/croot/matplotlib-suite_1677674332463/work
 matplotlib-inline #@ file:///C:/ci/matplotlib-inline_1661934094726/work
-mccabe @ file:///opt/conda/conda-bld/mccabe_1644221741721/work
+mccabe #@ file:///opt/conda/conda-bld/mccabe_1644221741721/work
 mdurl==0.1.2
 menuinst #@ file:///C:/Users/BUILDE~1/AppData/Local/Temp/abs_455sf5o0ct/croots/recipe/menuinst_1661805970842/work
 mistune @ file:///C:/ci_310/mistune_1642084168466/work
