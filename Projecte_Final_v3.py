@@ -92,14 +92,12 @@ df_WTG_File.to_excel (r'WTG_Step_25ms.xlsx', index = None, header=True)
 
 WTGs_analysis = pd.read_excel(r"WTG_Step_25ms.xlsx", skiprows=2) # r is used before absolute file path 
 
-
 # =============================================================================
 # #--------LVRT and HVRT File -------------
 # =============================================================================
 #WTGs_LVRT_HVRT = pd.read_excel(r"LVRT_HVRT.xlsx", skiprows=2)#Fault Ride-though Analysis
 WTGs_LVRT_HVRT_Setpoint = pd.read_excel(r"LVRT_HVRT_Setpoint.xlsx")#Fault Ride-though Analysis
-
-#WTGs_LVRT_HVRT_Setpoint.head()#  Clean Header o fthe file
+WTGs_LVRT_HVRT_Setpoint.head()#  Clean Header o fthe file
 
 # =============================================================================
 # introduce Pag Title (aligned) and intro Web page for reference
