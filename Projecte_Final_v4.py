@@ -127,21 +127,26 @@ taula_images = {''}
 # =============================================================================
 # #-----------------Upload Wind Turbines for PQ Capability CSV file and read it ----------------------------------
 # =============================================================================
-
+# =============================================================================
+# #-----------------Upload CSV file and read it ----------------------------------
+# =============================================================================
 df_WTG_File = pd.read_csv("WTG_Step_4_25ms.csv")  # read a CSV file inside the 'data" folder next to 'app.py'
-
-# =============================================================================
-# #df_WTG_File = df_WTG_File.drop(0)
-# #df_WTG_File.head()#  Clean Header o fthe file
-# 
-# # df_WTG_File  = df_WTG_File.rename(columns={"All calculations" : "Time in ms"  })
-# 
-# =============================================================================
-
-# =============================================================================
+df_WTG_File.to_excel (r'WTG_Step_25ms.xlsx', index = None, header=True)
+df_WTG_File  = df_WTG_File.rename(columns={"All calculations" : "Time in ms"})
 # # To avoid using skiprowns The csv could be changed from int to float
-# 
-# df_WTG_File.astye('float32')
+df_WTG_File.astye('float32')
+WTGs_analysis = pd.read_excel(r"WTG_Step_25ms.xlsx", skiprows=2) # r is used before absolute file path 
+
+# =============================================================================
+# #--------LVRT and HVRT File -------------
+# =============================================================================
+#WTGs_LVRT_HVRT = pd.read_excel(r"LVRT_HVRT.xlsx", skiprows=2)#Fault Ride-though Analysis
+WTGs_LVRT_HVRT_Setpoint = pd.read_excel(r"LVRT_HVRT_Setpoint.xlsx")#Fault Ride-though Analysis
+WTGs_LVRT_HVRT_Setpoint.head()#  Clean Header o fthe file
+# =============================================================================
+
+# =============================================================================
+
 # =============================================================================
 
 
@@ -310,8 +315,7 @@ with col_Data_2:
             if bt:
                 txt = "Text01"
                 input.text_input("Insert text:", value=txt)
-
-st.write(txt)
+		st.write(txt)
             
 # =============================================================================
 #             text = " The analysis of test shown a complied achievement the requeriment by the WTG"  
@@ -323,7 +327,7 @@ st.write(txt)
 # =============================================================================
         
         #else add_radio == No Passed:               
-        else :
+      else :
             
             NoPassed()
              
@@ -391,12 +395,11 @@ st.write(txt)
 
       # Showing the plot with the data 
         var_time  = WTGs_LVRT_HVRT_Setpoint.iloc[2:,0]
-        var_Q     = WTGs_LVRT_HVRT_Setpoint.iloc[2:,1]
-        plt.plot(var_time ,var_Q)
+        var_LVRT  = WTGs_LVRT_HVRT_Setpoint.iloc[2:,1]
+        plt.plot(var_time ,var_LVRT)
         plt.savefig("LVRT.png")
 
         #--- I select the image from the folder using the Sidebar Selector (above)
-                #image_Pdata = "./Final_Project/"
         st.image("LVRT.png", caption= is_wind)
        # st.markdown(""Write Conslusion: ", st.text_input("")
 
