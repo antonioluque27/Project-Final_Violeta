@@ -348,17 +348,17 @@ with col_Data_2:
         plt.savefig("PQ_Capability.png")
         
         # =============================================================================
-         var_columns = WTGs_LVRT_HVRT.groupby.iloc[2:,1]
-         print (var_columns)
+        var_columns = WTGs_LVRT_HVRT.groupby.iloc[2:,1]
+        print (var_columns)
          ####--Create a Figure to be add data
-         plt.figure(constrained_layout=True, figsize =(7, 7))
+        plt.figure(constrained_layout=True, figsize =(7, 7))
 # 
-         plt.title('PQ Capability Analysis',fontweight ="bold",size=18)
-         plt.xlabel('"Reactive Power"',size=12)
-         plt.ylabel('Active Power (kV)',size=12)
+        plt.title('PQ Capability Analysis',fontweight ="bold",size=18)
+        plt.xlabel('"Reactive Power"',size=12)
+        plt.ylabel('Active Power (kV)',size=12)
 #     # Adding a grid to the Figure
-         plt.grid()
-         plt.legend(['Reactive Power'],loc='upper right')
+        plt.grid()
+        plt.legend(['Reactive Power'],loc='upper right')
 
 #       # Showing the plot with the data 
 #       # Selecting Rows for do Mean Value for Active Power WTG 1.1
