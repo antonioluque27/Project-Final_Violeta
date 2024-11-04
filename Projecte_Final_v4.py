@@ -276,7 +276,7 @@ with col_Data_2:
 
             if bt:
 		    
-               txt = "Text01"
+               txt = "Cleared"
                input.text_input("Insert text:", value=txt)
 	       st.write(txt)
             
