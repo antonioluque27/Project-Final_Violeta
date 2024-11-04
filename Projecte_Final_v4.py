@@ -144,12 +144,6 @@ WTGs_analysis = pd.read_excel(r"WTG_Step_25ms.xlsx", skiprows=2) # r is used bef
 WTGs_LVRT_HVRT_Setpoint = pd.read_excel(r"LVRT_HVRT_Setpoint.xlsx")#Fault Ride-though Analysis
 WTGs_LVRT_HVRT_Setpoint.head()#  Clean Header o fthe file
 # =============================================================================
-
-# =============================================================================
-
-# =============================================================================
-
-
 df_WTG_File.to_excel (r'WTG_Step_25ms.xlsx', index = None, header=True)
 
 WTGs_analysis = pd.read_excel(r"WTG_Step_25ms.xlsx", skiprows=2) # r is used before absolute file path 
@@ -157,14 +151,8 @@ WTGs_analysis = pd.read_excel(r"WTG_Step_25ms.xlsx", skiprows=2) # r is used bef
 # =============================================================================
 # #--------LVRT and HVRT File -------------
 # =============================================================================
-
-
 WTGs_LVRT_HVRT_Setpoint = pd.read_excel(r"LVRT_HVRT_Setpoint.xlsx")#Fault Ride-though Analysis
-
-#WTGs_LVRT_HVRT_Setpoint.head()#  Clean Header o fthe file
-
-
-
+WTGs_LVRT_HVRT_Setpoint.head()#  Clean Header o fthe file
 
 # =============================================================================
 # introduce Pag Title (aligned) and intro Web page for reference
@@ -172,9 +160,7 @@ WTGs_LVRT_HVRT_Setpoint = pd.read_excel(r"LVRT_HVRT_Setpoint.xlsx")#Fault Ride-t
 #st.title("Instantaneous Performance of Wind Turbines")  # add a title
 
 st.markdown("<h1 style='text-align: center; color: grey;'>Instantaneous Performance of Wind Turbines</h1>", unsafe_allow_html=True)
-
 st.header("Analysis of Grid Compliance Tests based in the IEC International Standard")# add a Header fro Title
-
 
 # link the pag with a website
 
@@ -237,7 +223,6 @@ with col_Req_1:
                         response conditions.''')
                                     
         elif is_wind == "Reactive Power":
-            
             text_Q = st.write(''' The aim of this test is to determine the response of the WT to reference commands regarding
                                   the static error, the rise time and the settling time of reactive power using either reactive
                                    power, voltage or cos φ reference values, depending on the wind turbine control system as
@@ -280,10 +265,8 @@ with col_Data_2:
     st.subheader("Requeriment Analysed:"  + is_wind)
     if is_wind == "Active Power":
                 
-####--Create a Figure to be add data
-
+####---Create a Figure to be added
         plt.figure(constrained_layout=True, figsize =(7, 7))
-
         plt.title('Active Power Set-Point',fontweight ="bold",size=18)
         #plt.suptitle('Figure')
         plt.xlabel('"Time in seconds"',size=12)
@@ -306,9 +289,7 @@ with col_Data_2:
                 
         # =============================================================================
         #         Enter Input text for final decision of Test
-        
         if add_radio == "Passed":
-            
             my_pass()
             bt = st.button("Clear Text")
 
@@ -361,10 +342,9 @@ with col_Data_2:
         plt.savefig("Reactive Power Set-Point.png")
 
         #--- I select the image from the folder using the Sidebar Selector (above)
-                #image_Pdata = "./Final_Project/"
         st.image("Reactive Power Set-Point.png", caption= is_wind) 
         # =============================================================================
-        #         Enter Input text for final decision
+        # Enter Input text for final decision
         if add_radio == "Passed":
             my_pass()
 # =============================================================================
@@ -380,34 +360,30 @@ with col_Data_2:
             NoPassed()
 
     elif is_wind == "FRT for LVRT":
-        
-        ####--Create a Figure to be add data
+        ####--Create a Figure to be added 
         plt.figure(constrained_layout=True, figsize =(7, 7))
-
         plt.title('LVRT Analysis',fontweight ="bold",size=18)
-        #plt.suptitle('Figure')
         plt.xlabel('"Time in seconds"',size=12)
         plt.ylabel('Voltage (kV)',size=12)
 
     # Adding a grid to the Figure
         plt.grid()
-        plt.legend(['Reactive Power'],loc='upper right')
+        plt.legend(['Voltage'],loc='upper right'))
 
-      # Showing the plot with the data 
+# =============================================================================
+# Showing the plot with the data from WTGs_LVRT_HVRT_Setpoint
+# =============================================================================
         var_time  = WTGs_LVRT_HVRT_Setpoint.iloc[2:,0]
         var_LVRT  = WTGs_LVRT_HVRT_Setpoint.iloc[2:,1]
         plt.plot(var_time ,var_LVRT)
-        plt.savefig("LVRT.png")
-
-        #--- I select the image from the folder using the Sidebar Selector (above)
+        plt.savefig("LVRT.png")    
+ #--- I select the image from the folder using the Sidebar Selector (above)
         st.image("LVRT.png", caption= is_wind)
-       # st.markdown(""Write Conslusion: ", st.text_input("")
+        st.markdown("Write Conclusion: ", st.text_input("")
 
     elif is_wind == "FRT for HVRT":
-        
-        ####--Create a Figure to be add data
+        ####--Create a Figure to be added 
         plt.figure(constrained_layout=True, figsize =(7, 7))
-
         plt.title('HVRT Analysis',fontweight ="bold",size=18)
         #plt.suptitle('Figure')
         plt.xlabel('"Time in seconds"',size=12)
@@ -415,18 +391,17 @@ with col_Data_2:
 
     # Adding a grid to the Figure
         plt.grid()
-        plt.legend(['Reactive Power'],loc='upper right')
+        plt.legend(['Voltage'],loc='upper right')
 
       # Showing the plot with the data 
         var_time = WTGs_LVRT_HVRT_Setpoint.iloc[2:,0]
-        var_Q    = WTGs_LVRT_HVRT_Setpoint.iloc[2:,5]
-        plt.plot(var_time ,var_Q)
-        plt.savefig("HVRT.png")
+        var_HVRT = WTGs_LVRT_HVRT_Setpoint.iloc[2:,5]
+        plt.plot(var_time ,var_HV)
 
         #--- I select the image from the folder using the Sidebar Selector (above)
                 #image_Pdata = "./Final_Project/"
         st.image("HVRT.png", caption= is_wind)
-
+        st.markdown("Write Conclusion: ", st.text_input("")
         # =============================================================================
         #         Enter Input text for final decision
         if add_radio == "Passed":
