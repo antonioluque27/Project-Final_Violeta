@@ -1,9 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 Created on Thu Oct 17 11:34:29 2024
-
 """
-
 # Import streamlit Library
 import streamlit as st
 import math
@@ -336,7 +334,7 @@ with col_Data_2:
         var_LVRT     = WTGs_LVRT_HVRT_Setpoint.iloc[2:,1]
         plt.plot(var_time ,var_LVRT)
         plt.savefig("Active Power Set-Point.png")
-        plt.plot(var_time ,var_Q)
+        plt.plot(var_time ,var_LVRT)
         plt.savefig("LVRT.png")    
 	    
       # Showing the plot with the data 
@@ -366,7 +364,7 @@ with col_Data_2:
         var_HVRT = WTGs_LVRT_HVRT_Setpoint.iloc[2:,5]
         #var_time  = WTGs_LVRT_HVRT.iloc[2:,0]
         #var_Q     = WTGs_LVRT_HVRT.iloc[2:,5]
-        plt.plot(var_time ,var_Q)
+        plt.plot(var_time ,var_HVRT)
         plt.savefig("HVRT.png")
 
         #--- I select the image from the folder using the Sidebar Selector (above)
