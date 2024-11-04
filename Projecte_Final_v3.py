@@ -84,25 +84,22 @@ taula_images = {''}
 # var_iloc_Q     = []
 # var_iloc_time  = []
         
-        
 # =============================================================================
 # #-----------------Upload CSV file and read it ----------------------------------
 # =============================================================================
-
 df_WTG_File = pd.read_csv("WTG_Step_4_25ms.csv")  # read a CSV file inside the 'data" folder next to 'app.py'
-
 df_WTG_File.to_excel (r'WTG_Step_25ms.xlsx', index = None, header=True)
 
 WTGs_analysis = pd.read_excel(r"WTG_Step_25ms.xlsx", skiprows=2) # r is used before absolute file path 
 
-WTGs_LVRT_HVRT = pd.read_excel(r"LVRT_HVRT.xlsx", skiprows=2)#Fault Ride-though Analysis
+
 # =============================================================================
 # #--------LVRT and HVRT File -------------
 # =============================================================================
+#WTGs_LVRT_HVRT = pd.read_excel(r"LVRT_HVRT.xlsx", skiprows=2)#Fault Ride-though Analysis
 WTGs_LVRT_HVRT_Setpoint = pd.read_excel(r"LVRT_HVRT_Setpoint.xlsx")#Fault Ride-though Analysis
 
 #WTGs_LVRT_HVRT_Setpoint.head()#  Clean Header o fthe file
-
 
 # =============================================================================
 # introduce Pag Title (aligned) and intro Web page for reference
@@ -125,7 +122,6 @@ is_wind = st.sidebar.selectbox(
     "International Standard: Wind turbines –Part 21",
     ("Active Power", "Reactive Power", "FRT for LVRT", "FRT for HVRT", "PQ capability","Tolerance Band")
 )
-
 
 # Using "with" notation (this should be linked with the analysis of the plots)
 with st.sidebar:
@@ -218,7 +214,6 @@ with col_Data_2:
 ####--Create a Figure to be added 
         plt.figure(constrained_layout=True, figsize =(7, 7))
         plt.title('Active Power Set-Point',fontweight ="bold",size=18)
-        #plt.suptitle('Figure')
         plt.xlabel('"Time in seconds"',size=12)
         plt.ylabel('Active Power (MW)',size=12)
 
@@ -233,9 +228,7 @@ with col_Data_2:
         plt.legend(['Active Power'],loc='upper right')
         plt.savefig("Active Power Set-Point.png")
 
-
 #--- I select the image from the folder using the Sidebar Selector (above)
-        #image_Pdata = "./Final_Project/"
         st.image("Active Power Set-Point.png", caption= is_wind) 
                 
         # =============================================================================
@@ -262,7 +255,6 @@ with col_Data_2:
         ####--Create a Figure to be added 
         plt.figure(constrained_layout=True, figsize =(7, 7))
         plt.title('Reactive Power Set-Point',fontweight ="bold",size=18)
-        #plt.suptitle('Figure')
         plt.xlabel('"Time in seconds"',size=12)
         plt.ylabel('Reactive Power (Mvar)',size=12)
 
@@ -299,7 +291,6 @@ with col_Data_2:
         ####--Create a Figure to be added 
         plt.figure(constrained_layout=True, figsize =(7, 7))
         plt.title('LVRT Analysis',fontweight ="bold",size=18)
-        #plt.suptitle('Figure')
         plt.xlabel('"Time in seconds"',size=12)
         plt.ylabel('Voltage (kV)',size=12)
 
@@ -311,7 +302,6 @@ with col_Data_2:
 # =============================================================================
         var_time  = WTGs_LVRT_HVRT_Setpoint.iloc[2:,0]
         var_LVRT  = WTGs_LVRT_HVRT_Setpoint.iloc[2:,1]
-        plt.plot(var_time ,var_LVRT)
         plt.plot(var_time ,var_LVRT)
         plt.savefig("LVRT.png")    
 	    
