@@ -310,9 +310,8 @@ with col_Data_2:
 # Showing the plot with the data from WTGs_LVRT_HVRT_Setpoint
 # =============================================================================
         var_time  = WTGs_LVRT_HVRT_Setpoint.iloc[2:,0]
-        var_LVRT     = WTGs_LVRT_HVRT_Setpoint.iloc[2:,1]
+        var_LVRT  = WTGs_LVRT_HVRT_Setpoint.iloc[2:,1]
         plt.plot(var_time ,var_LVRT)
-        plt.savefig("LVRT Test.png")
         plt.plot(var_time ,var_LVRT)
         plt.savefig("LVRT.png")    
 	    
