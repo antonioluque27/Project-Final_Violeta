@@ -2,7 +2,7 @@
 #streamlit==1.24.1
 #pandas>2.0
 
-setuptools
+#setuptools
 #Python==3.7.0
 Python >=3.5.0
 streamlit==1.32.0
