@@ -344,32 +344,24 @@ with col_Data_2:
                 st.write(text_input)
 
     elif is_wind == "PQ capability":
-
-# =============================================================================
-#         # opening file_1.py and reading it with read() and executing if with exec()
-# =============================================================================
-        #with open("Ideal_Data_CSV_PQ_Capability_Plots.py") as file:
-         #   exec(file.read())
-          #  plt.savefig("PQ_Capability.png")
         
         plt.savefig("PQ_Capability.png")
         
         # =============================================================================
-#         var_columns = WTGs_LVRT_HVRT.groupby.iloc[2:,1]
-#         print (var_columns)
-#         ####--Create a Figure to be add data
-#         plt.figure(constrained_layout=True, figsize =(7, 7))
+         var_columns = WTGs_LVRT_HVRT.groupby.iloc[2:,1]
+         print (var_columns)
+         ####--Create a Figure to be add data
+         plt.figure(constrained_layout=True, figsize =(7, 7))
 # 
-#         plt.title('PQ Capability Analysis',fontweight ="bold",size=18)
-#         #plt.suptitle('Figure')
-#         plt.xlabel('"Reactive Power"',size=12)
-# #         plt.ylabel('Active Power (kV)',size=12)
+         plt.title('PQ Capability Analysis',fontweight ="bold",size=18)
+         plt.xlabel('"Reactive Power"',size=12)
+         plt.ylabel('Active Power (kV)',size=12)
 #     # Adding a grid to the Figure
-#         plt.grid()
-#         plt.legend(['Reactive Power'],loc='upper right')
+         plt.grid()
+         plt.legend(['Reactive Power'],loc='upper right')
 
 #       # Showing the plot with the data 
-#       # Selectiong Rows for do Mean Value for Active Power WTG 1.1
+#       # Selecting Rows for do Mean Value for Active Power WTG 1.1
        
 #         var_time  = WTGs_analysis.iloc[2:,0]
 #         var_Q     = WTGs_analysis.iloc[2:,1]
