@@ -113,14 +113,10 @@ st.markdown("<h1 style='text-align: center; color: grey;'>Instantaneous Performa
 
 st.header("Analysis of Grid Compliance Tests based in the IEC International Standard")# add a Header fro Title
 
-
 # link the pag with a website
-
 url = "https://webstore.iec.ch/en/publication/29528"
 st.write("check the Standard with this [link] (%s)" % url,unsafe_allow_html=True)
 #st.markdown("check the Standard in with this [link](%s)" % url,unsafe_allow_html=True)
-
-
 
 # =============================================================================
 # #--------------Sidebar---------------
@@ -139,8 +135,7 @@ with st.sidebar:
     )    
 # =============================================================================
 # SECOND STEP SPLIT SCREEN IN TWO PARTS
-#
-# =============================================================================
+## =============================================================================
 
 # =============================================================================
 # # #---------Split Screen into 2 Columns Comparation ----------
@@ -154,26 +149,21 @@ with col_Req_1:
 # Adding Requeriment Images and create a Table
 #   I can sellect the image
     try: 
-
-        taula_images = { "Active Power"  :"ActiveSet_Point.png", 
-                     "Reactive Power":"Reactive_set_point.png",
-                     "FRT for LVRT"  :"LVRT.png", 
-                     "FRT for HVRT"  :"HVRT.jpg",
-                     "PQ capability" :"PQ_Capability.png",
-                     "Tolerance Band":"Tole_band.png"}
+        taula_images = {"Active Power"  :"ActiveSet_Point.png", 
+                        "Reactive Power":"Reactive_set_point.png",
+                        "FRT for LVRT"  :"LVRT.png", 
+                        "FRT for HVRT"  :"HVRT.jpg",
+                        "PQ capability" :"PQ_Capability.png",
+                        "Tolerance Band":"Tole_band.png"}
                     
-                 
 #--- I select the image from the folder using the Sidebar Selector (above)
-   
         image_name = "./img/"+ taula_images[is_wind]
         st.subheader("Requeriment Selected:"  + is_wind)
         st.image(image_name, caption= is_wind, width=350)
 
 # =============================================================================
-# # TEXT TO BE INTRODUCE BELOW each Rqueriment
+# # TEXT TO BE INTRODUCE BELOW each Requirement
 # =============================================================================
-
-
         if is_wind == "Active Power":
             text_P = st.write('''The ability of the wind turbine to operate in active power control mode shall be characterized
                        for various reference values given by the control interface. The aim of this test is to determine
@@ -212,8 +202,7 @@ with col_Req_1:
         elif  is_wind == "Tolerance Band":
             text_PQ = st.write(''' The maximum permissible tolerance is calculated  ± 5 %. ''')
 
-    
-# If there is any issue the program should give this erro 
+# If there is any issue the program should give this error 
     except Exception as e:
          st.error(" No he pogut carregar la imatge" + image_name)
          print (e)
@@ -238,7 +227,6 @@ with col_Data_2:
         plt.grid()
         plt.legend(['Active Power'],loc='upper right')
 
-        # Showing the plot with the data 
 # =============================================================================
 # #         # Showing the plot with the data from WTGs_LVRT_HVRT_Setpoint
 # =============================================================================
@@ -260,18 +248,17 @@ with col_Data_2:
         
         if add_radio == "Passed":
             text = " The analysis of test shown a complied achievement the requirement by the WTG"  
-        
             text_input = st.text_input("Enter Conclusion of the Test 👇")
             if text_input:
                 st.write("You have entered: " +  text)
                 st.write(text_input)
+	# =============================================================================	    
         # elif add_radio == No Passed:
         #     text = " The analysis of the requirement showed a device's failure to achieve the task."
         #     text_input = st.text_input("Enter Conclusion of the Test 👇")
         #     if text_input:
         #         st.write("You have entered: "+ text + text_input)
                 
-            
         # my_pass()
          
         # nopassed()
@@ -308,12 +295,11 @@ with col_Data_2:
         #         Enter Input text for final decision
         if add_radio == "Passed":
             text = " The analysis of test shown a complied achievement the requirement by the WTG"  
-        
             text_input = st.text_input("Enter Conclusion of the Test 👇")
             if text_input:
                 st.write("You have entered: " +  text)
                 st.write(text_input)
-
+	
     elif is_wind == "FRT for LVRT":
         
         ####--Create a Figure to be add data
@@ -328,7 +314,7 @@ with col_Data_2:
         plt.grid()
         plt.legend(['Reactive Power'],loc='upper right')
 # =============================================================================
-# #         # Showing the plot with the data from WTGs_LVRT_HVRT_Setpoint
+# Showing the plot with the data from WTGs_LVRT_HVRT_Setpoint
 # =============================================================================
         var_time  = WTGs_LVRT_HVRT_Setpoint.iloc[2:,0]
         var_LVRT     = WTGs_LVRT_HVRT_Setpoint.iloc[2:,1]
@@ -340,15 +326,17 @@ with col_Data_2:
       # Showing the plot with the data 
         #var_time  = WTGs_LVRT_HVRT.iloc[2:,0]
         #var_Q     = WTGs_LVRT_HVRT.iloc[2:,1]
-
-        #--- I select the image from the folder using the Sidebar Selector (above)
-                #image_Pdata = "./Final_Project/"
-        st.image("LVRT.png", caption= is_wind)
-       # st.markdown(""Write Conclusion: ", st.text_input("")
+        # =============================================================================
+        #   Enter Input text for final decision
+        if add_radio == "Passed":
+            text = " The analysis of test shown a complied achievement the requirement by the WTG"  
+            text_input = st.text_input("Enter Conclusion of the Test 👇")
+            if text_input:
+                st.write("You have entered: " +  text)
+                st.write(text_input)
 
     elif is_wind == "FRT for HVRT":
-        
-        ####--Create a Figure to be added 
+                ####--Create a Figure to be added 
         plt.figure(constrained_layout=True, figsize =(7, 7))
         plt.title('HVRT Analysis',fontweight ="bold",size=18)
         #plt.suptitle('Figure')
