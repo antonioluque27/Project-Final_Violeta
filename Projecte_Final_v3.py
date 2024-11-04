@@ -329,8 +329,8 @@ with col_Data_2:
 	     #if add_radio == No Passed:
              text = "The analysis of the requirement showed a device's failure to achieve the task."
              text_input = st.text_input("Enter Conclusion of the Test 👇")
-            	 if text_input:
-             		st.write("You have entered: "+ text + text_input)
+             if text_input:
+             	st.write("You have entered: "+ text + text_input)
 
     elif is_wind == "FRT for HVRT":
                 ####--Create a Figure to be added 
