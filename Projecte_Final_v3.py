@@ -135,8 +135,6 @@ with st.sidebar:
 
 # =============================================================================
 # # #---------Split Screen into 2 Columns Comparation ----------
-
-
 col_Req_1, col_Data_2 = st.columns(2)
 
 with col_Req_1:
@@ -254,16 +252,16 @@ with col_Data_2:
     elif is_wind == "Reactive Power":
         ####--Create a Figure to be added 
         plt.figure(constrained_layout=True, figsize =(7, 7))
-        plt.title('Reactive Power Set-Point',fontweight ="bold",size=18)
+        plt.title('Reactive Power Set-Point Test',fontweight ="bold",size=18)
         plt.xlabel('"Time in seconds"',size=12)
         plt.ylabel('Reactive Power (Mvar)',size=12)
 
-    # Adding a grid to the Figure
-        plt.grid()
-        plt.legend(['Reactive Power'],loc='upper right')
 # =============================================================================
 # #         # Showing the plot with the data from WTGs_LVRT_HVRT_Setpoint
-# =================================================================
+# =================================================================	
+        plt.grid()
+        plt.legend(['Reactive Power'],loc='upper right')
+    
         var_time  = WTGs_LVRT_HVRT_Setpoint.iloc[2:,9]
         var_Q     = WTGs_LVRT_HVRT_Setpoint.iloc[2:,10]
         plt.plot(var_time ,var_Q)
@@ -296,7 +294,7 @@ with col_Data_2:
 
     # Adding a grid to the Figure
         plt.grid()
-        plt.legend(['Reactive Power'],loc='upper right')
+        plt.legend(['Voltage'],loc='upper right')
 # =============================================================================
 # Showing the plot with the data from WTGs_LVRT_HVRT_Setpoint
 # =============================================================================
@@ -331,7 +329,7 @@ with col_Data_2:
 
     # Adding a grid to the Figure
         plt.grid()
-        plt.legend(['Reactive Power'],loc='upper right')
+        plt.legend(['Voltage'],loc='upper right')
 
       # Showing the plot with the data 
         var_time = WTGs_LVRT_HVRT_Setpoint.iloc[2:,0]
