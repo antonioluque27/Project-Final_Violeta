@@ -276,19 +276,17 @@ with col_Data_2:
 
             if bt:
 		    
-                	txt = "Text01"
-                	input.text_input("Insert text:", value=txt)
-			st.write(txt)
+               txt = "Text01"
+               input.text_input("Insert text:", value=txt)
+	       st.write(txt)
             
 # =============================================================================
 #             text = " The analysis of test shown a complied achievement the requeriment by the WTG"  
-#         
 #             text_input = st.text_input("Enter Conclusion of the Test 👇")
 #             if text_input:
 #                 st.write("You have entered: " +  text)
 #                 st.write(text_input)
 # =============================================================================
-        
         #else add_radio == No Passed:               
       else :
             
@@ -302,10 +300,8 @@ with col_Data_2:
 # =============================================================================
             
     elif is_wind == "Reactive Power":
-        
         ####--Create a Figure to be add data
         plt.figure(constrained_layout=True, figsize =(7, 7))
-
         plt.title('Reactive Power Set-Point',fontweight ="bold",size=18)
         #plt.suptitle('Figure')
         plt.xlabel('"Time in seconds"',size=12)
