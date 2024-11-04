@@ -89,7 +89,6 @@ taula_images = {''}
 # =============================================================================
 df_WTG_File = pd.read_csv("WTG_Step_4_25ms.csv")  # read a CSV file inside the 'data" folder next to 'app.py'
 df_WTG_File.to_excel (r'WTG_Step_25ms.xlsx', index = None, header=True)
-
 WTGs_analysis = pd.read_excel(r"WTG_Step_25ms.xlsx", skiprows=2) # r is used before absolute file path 
 
 # =============================================================================
@@ -105,7 +104,6 @@ WTGs_LVRT_HVRT_Setpoint.head()#  Clean Header o fthe file
 #st.title("Instantaneous Performance of Wind Turbines")  # add a title
 
 st.markdown("<h1 style='text-align: center; color: grey;'>Instantaneous Performance of Wind Turbines</h1>", unsafe_allow_html=True)
-
 st.header("Analysis of Grid Compliance Tests based in the IEC International Standard")# add a Header fro Title
 
 # link the pag with a website
@@ -158,7 +156,7 @@ with col_Req_1:
 # =============================================================================
         if is_wind == "Active Power":
             text_P = st.write('''The ability of the wind turbine to operate in active power control mode shall be characterized
-                       for various reference values given by the control interface. The aim of this test is to determine
+                       for various reference values given by the control interface. This test aims to determine
                        the response of the WT to reference commands regarding the static error, the rise time and
                        the settling time of active power, for both steady-state conditions and under dynamic
                         response conditions.''')
@@ -172,22 +170,19 @@ with col_Req_1:
 
         elif  is_wind == "FRT for LVRT":
             text_LVRT = st.write('''The ability of a wind turbine or wind power plant to stay connected during voltage dips.
-                                 The test is intended to verify the wind turbine response to undervoltage 
-                                 The test is intended to verify the wind turbine response to undervoltage
-                                 events (due to e.g. grid faults, switching operations) and providing a basis for wind turbine
+                                 The test is intended to verify the wind turbine response to Undervoltage. 
+                                 events (due to e.g. grid faults, switching operations) and provide a basis for wind turbine
                                  numerical simulation model validation. ''')
 
         elif  is_wind == "FRT for HVRT":
             text_HVRT = st.write('''The ability of a wind turbine or wind power plant to stay connected during voltage dips.
-                                 The test is intended to verify the wind turbine response to undervoltage 
-                                 The test is intended to verify the wind turbine response to undervoltage
+                                 The test is intended to verify the wind turbine response to Undervoltage. 
                                  events (due to e.g. grid faults, switching operations) and providing a basis for wind turbine
                                  numerical simulation model validation. ''')
              
         elif  is_wind == "PQ capability":
             text_PQ = st.write(''' The ability of a wind turbine or wind power plant to stay connected during voltage dips.
-                                 The test is intended to verify the wind turbine response to undervoltage 
-                                 The test is intended to verify the wind turbine response to undervoltage
+                                 The test is intended to verify the wind turbine response to Undervoltage. 
                                  events (due to e.g. grid faults, switching operations) and providing a basis for wind turbine
                                  numerical simulation model validation. ''')
 
@@ -259,7 +254,6 @@ with col_Data_2:
 # =================================================================	
         plt.grid()
         plt.legend(['Reactive Power'],loc='upper right')
-    
         var_time  = WTGs_LVRT_HVRT_Setpoint.iloc[2:,9]
         var_Q     = WTGs_LVRT_HVRT_Setpoint.iloc[2:,10]
         plt.plot(var_time ,var_Q)
@@ -300,7 +294,8 @@ with col_Data_2:
         var_LVRT  = WTGs_LVRT_HVRT_Setpoint.iloc[2:,1]
         plt.plot(var_time ,var_LVRT)
         plt.savefig("LVRT.png")    
-	    
+ #--- I select the image from the folder using the Sidebar Selector (above)
+        st.image("LVRT.png", caption= is_wind)
         # =============================================================================
         #   Enter Input text for final decision
         if add_radio == "Passed":
