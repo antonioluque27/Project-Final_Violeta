@@ -294,9 +294,10 @@ with col_Data_2:
             bt = st.button("Clear Text")
 
             if bt:
-                txt = "Text01"
-                input.text_input("Insert text:", value=txt)
-		st.write(txt)
+		    
+                	txt = "Text01"
+                	input.text_input("Insert text:", value=txt)
+			st.write(txt)
             
 # =============================================================================
 #             text = " The analysis of test shown a complied achievement the requeriment by the WTG"  
