@@ -217,25 +217,20 @@ with col_Data_2:
                 
 ####--Create a Figure to be added 
         plt.figure(constrained_layout=True, figsize =(7, 7))
-
         plt.title('Active Power Set-Point',fontweight ="bold",size=18)
         #plt.suptitle('Figure')
         plt.xlabel('"Time in seconds"',size=12)
         plt.ylabel('Active Power (MW)',size=12)
 
-        # Adding a grid to the Figure
-        plt.grid()
-        plt.legend(['Active Power'],loc='upper right')
-
 # =============================================================================
-# #         # Showing the plot with the data from WTGs_LVRT_HVRT_Setpoint
+# Showing the plot with the data from WTGs_LVRT_HVRT_Setpoint
 # =============================================================================
         var_time  = WTGs_LVRT_HVRT_Setpoint.iloc[2:,9]
         var_P     = WTGs_LVRT_HVRT_Setpoint.iloc[2:,11]
-        
-        #var_time  = WTGs_analysis.iloc[2:,0]
-        #var_P     = WTGs_analysis.iloc[2:,1]
         plt.plot(var_time ,var_P)
+	# Adding a grid to the Figure
+        plt.grid()
+        plt.legend(['Active Power'],loc='upper right')
         plt.savefig("Active Power Set-Point.png")
 
 
@@ -247,25 +242,23 @@ with col_Data_2:
         #         Enter Input text for final decision of Test
         
         if add_radio == "Passed":
-            text = " The analysis of test shown a complied achievement the requirement by the WTG"  
+            text = "The analysis of plots shown a compiled achievement of the requirement by the WTG"  
             text_input = st.text_input("Enter Conclusion of the Test 👇")
             if text_input:
                 st.write("You have entered: " +  text)
                 st.write(text_input)
 	# =============================================================================	    
-        # elif add_radio == No Passed:
-        #     text = " The analysis of the requirement showed a device's failure to achieve the task."
-        #     text_input = st.text_input("Enter Conclusion of the Test 👇")
-        #     if text_input:
-        #         st.write("You have entered: "+ text + text_input)
-                
+        else:
+	     #if add_radio == No Passed:
+             text = "The analysis of the requirement showed a device's failure to achieve the task."
+             text_input = st.text_input("Enter Conclusion of the Test 👇")
+             if text_input:
+             st.write("You have entered: "+ text + text_input)
         # my_pass()
          
         # nopassed()
 
-            
     elif is_wind == "Reactive Power":
-        
         ####--Create a Figure to be added 
         plt.figure(constrained_layout=True, figsize =(7, 7))
         plt.title('Reactive Power Set-Point',fontweight ="bold",size=18)
@@ -281,30 +274,30 @@ with col_Data_2:
 # =================================================================
         var_time  = WTGs_LVRT_HVRT_Setpoint.iloc[2:,9]
         var_Q     = WTGs_LVRT_HVRT_Setpoint.iloc[2:,10]
-     
-	# Showing the plot with the data 
-        #var_time  = WTGs_analysis.iloc[2:,0]
-        #var_Q     = WTGs_analysis.iloc[2:,9]
         plt.plot(var_time ,var_Q)
         plt.savefig("Reactive Power Set-Point.png")
 
         #--- I select the image from the folder using the Sidebar Selector (above)
-                #image_Pdata = "./Final_Project/"
         st.image("Reactive Power Set-Point.png", caption= is_wind) 
         # =============================================================================
         #         Enter Input text for final decision
         if add_radio == "Passed":
-            text = " The analysis of test shown a complied achievement the requirement by the WTG"  
+            text = "The analysis of plots shown a compiled achievement of the requirement by the WTG"  
             text_input = st.text_input("Enter Conclusion of the Test 👇")
             if text_input:
                 st.write("You have entered: " +  text)
                 st.write(text_input)
+	#=============================================================================	    
+        else:
+	     #if add_radio == No Passed:
+             text = "The analysis of the requirement showed a device's failure to achieve the task."
+             text_input = st.text_input("Enter Conclusion of the Test 👇")
+             	if text_input:
+             	    st.write("You have entered: "+ text + text_input)
 	
     elif is_wind == "FRT for LVRT":
-        
-        ####--Create a Figure to be add data
+        ####--Create a Figure to be added 
         plt.figure(constrained_layout=True, figsize =(7, 7))
-
         plt.title('LVRT Analysis',fontweight ="bold",size=18)
         #plt.suptitle('Figure')
         plt.xlabel('"Time in seconds"',size=12)
@@ -319,21 +312,25 @@ with col_Data_2:
         var_time  = WTGs_LVRT_HVRT_Setpoint.iloc[2:,0]
         var_LVRT     = WTGs_LVRT_HVRT_Setpoint.iloc[2:,1]
         plt.plot(var_time ,var_LVRT)
-        plt.savefig("Active Power Set-Point.png")
+        plt.savefig("LVRT Test.png")
         plt.plot(var_time ,var_LVRT)
         plt.savefig("LVRT.png")    
 	    
-      # Showing the plot with the data 
-        #var_time  = WTGs_LVRT_HVRT.iloc[2:,0]
-        #var_Q     = WTGs_LVRT_HVRT.iloc[2:,1]
         # =============================================================================
         #   Enter Input text for final decision
         if add_radio == "Passed":
-            text = " The analysis of test shown a complied achievement the requirement by the WTG"  
+            text = "The analysis of test shown a complied achievement the requirement by the WTG"  
             text_input = st.text_input("Enter Conclusion of the Test 👇")
             if text_input:
                 st.write("You have entered: " +  text)
                 st.write(text_input)
+#=============================================================================	    
+        else:
+	     #if add_radio == No Passed:
+             text = "The analysis of the requirement showed a device's failure to achieve the task."
+             text_input = st.text_input("Enter Conclusion of the Test 👇")
+            	 if text_input:
+             		st.write("You have entered: "+ text + text_input)
 
     elif is_wind == "FRT for HVRT":
                 ####--Create a Figure to be added 
@@ -350,19 +347,16 @@ with col_Data_2:
       # Showing the plot with the data 
         var_time = WTGs_LVRT_HVRT_Setpoint.iloc[2:,0]
         var_HVRT = WTGs_LVRT_HVRT_Setpoint.iloc[2:,5]
-        #var_time  = WTGs_LVRT_HVRT.iloc[2:,0]
-        #var_Q     = WTGs_LVRT_HVRT.iloc[2:,5]
         plt.plot(var_time ,var_HVRT)
         plt.savefig("HVRT.png")
 
         #--- I select the image from the folder using the Sidebar Selector (above)
-                #image_Pdata = "./Final_Project/"
         st.image("HVRT.png", caption= is_wind)
 
         # =============================================================================
         #         Enter Input text for final decision
         if add_radio == "Passed":
-            text = " The analysis of test shown a complied achievement the requirement by the WTG"  
+            text = "The analysis of test shown a complied achievement the requirement by the WTG"  
         
             text_input = st.text_input("Enter Conclusion of the Test 👇")
             if text_input:
@@ -377,14 +371,7 @@ with col_Data_2:
         #with open("Ideal_Data_CSV_PQ_Capability_Plots.py") as file:
          #   exec(file.read())
           #  plt.savefig("PQ_Capability.png")
-
-       # =============================================================================
-        #         # opening file_1.py and reading it with read() and executing if with exec()
-        # =============================================================================
-        #subprocess.run(["python", "Ideal_Data_CSV_PQ_Capability_Plots.py"])
-        # running other file using run()
-        os.system("Ideal_Data_CSV_PQ_Capability_Plots.py")
-         
+        
         plt.savefig("PQ_Capability.png")
         
         # =============================================================================
@@ -414,7 +401,7 @@ with col_Data_2:
         # =============================================================================
         #         Enter Input text for final decision
         if add_radio == "Passed":
-            text = " The analysis of test shown a complied achievement the requeriment by the WTG"  
+            text = "The analysis of test shown a complied achievement the requirement by the WTG"  
         
             text_input = st.text_input("Enter Conclusion of the Test 👇")
             if text_input:
