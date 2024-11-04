@@ -98,6 +98,12 @@ df_WTG_File.to_excel (r'WTG_Step_25ms.xlsx', index = None, header=True)
 WTGs_analysis = pd.read_excel(r"WTG_Step_25ms.xlsx", skiprows=2) # r is used before absolute file path 
 
 WTGs_LVRT_HVRT = pd.read_excel(r"LVRT_HVRT.xlsx", skiprows=2)#Fault Ride-though Analysis
+# =============================================================================
+# #--------LVRT and HVRT File -------------
+# =============================================================================
+WTGs_LVRT_HVRT_Setpoint = pd.read_excel(r"LVRT_HVRT_Setpoint.xlsx")#Fault Ride-though Analysis
+
+#WTGs_LVRT_HVRT_Setpoint.head()#  Clean Header o fthe file
 
 
 # =============================================================================
@@ -222,8 +228,7 @@ with col_Data_2:
     st.subheader("Requeriment Analysed:"  + is_wind)
     if is_wind == "Active Power":
                 
-####--Create a Figure to be add data
-
+####--Create a Figure to be added 
         plt.figure(constrained_layout=True, figsize =(7, 7))
 
         plt.title('Active Power Set-Point',fontweight ="bold",size=18)
@@ -236,8 +241,14 @@ with col_Data_2:
         plt.legend(['Active Power'],loc='upper right')
 
         # Showing the plot with the data 
-        var_time  = WTGs_analysis.iloc[2:,0]
-        var_P     = WTGs_analysis.iloc[2:,1]
+# =============================================================================
+# #         # Showing the plot with the data from WTGs_LVRT_HVRT_Setpoint
+# =============================================================================
+        var_time  = WTGs_LVRT_HVRT_Setpoint.iloc[2:,9]
+        var_P     = WTGs_LVRT_HVRT_Setpoint.iloc[2:,11]
+        
+        #var_time  = WTGs_analysis.iloc[2:,0]
+        #var_P     = WTGs_analysis.iloc[2:,1]
         plt.plot(var_time ,var_P)
         plt.savefig("Active Power Set-Point.png")
 
@@ -250,14 +261,14 @@ with col_Data_2:
         #         Enter Input text for final decision of Test
         
         if add_radio == "Passed":
-            text = " The analysis of test shown a complied achievement the requeriment by the WTG"  
+            text = " The analysis of test shown a complied achievement the requirement by the WTG"  
         
             text_input = st.text_input("Enter Conclusion of the Test 👇")
             if text_input:
                 st.write("You have entered: " +  text)
                 st.write(text_input)
         # elif add_radio == No Passed:
-        #     text = " The analysis of the requeriment shown a failure of the device to achievement the tast."
+        #     text = " The analysis of the requirement showed a device's failure to achieve the task."
         #     text_input = st.text_input("Enter Conclusion of the Test 👇")
         #     if text_input:
         #         st.write("You have entered: "+ text + text_input)
@@ -270,9 +281,8 @@ with col_Data_2:
             
     elif is_wind == "Reactive Power":
         
-        ####--Create a Figure to be add data
+        ####--Create a Figure to be added 
         plt.figure(constrained_layout=True, figsize =(7, 7))
-
         plt.title('Reactive Power Set-Point',fontweight ="bold",size=18)
         #plt.suptitle('Figure')
         plt.xlabel('"Time in seconds"',size=12)
@@ -281,10 +291,15 @@ with col_Data_2:
     # Adding a grid to the Figure
         plt.grid()
         plt.legend(['Reactive Power'],loc='upper right')
-
-      # Showing the plot with the data 
-        var_time  = WTGs_analysis.iloc[2:,0]
-        var_Q     = WTGs_analysis.iloc[2:,9]
+# =============================================================================
+# #         # Showing the plot with the data from WTGs_LVRT_HVRT_Setpoint
+# =================================================================
+        var_time  = WTGs_LVRT_HVRT_Setpoint.iloc[2:,9]
+        var_Q     = WTGs_LVRT_HVRT_Setpoint.iloc[2:,10]
+     
+	# Showing the plot with the data 
+        #var_time  = WTGs_analysis.iloc[2:,0]
+        #var_Q     = WTGs_analysis.iloc[2:,9]
         plt.plot(var_time ,var_Q)
         plt.savefig("Reactive Power Set-Point.png")
 
@@ -294,7 +309,7 @@ with col_Data_2:
         # =============================================================================
         #         Enter Input text for final decision
         if add_radio == "Passed":
-            text = " The analysis of test shown a complied achievement the requeriment by the WTG"  
+            text = " The analysis of test shown a complied achievement the requirement by the WTG"  
         
             text_input = st.text_input("Enter Conclusion of the Test 👇")
             if text_input:
@@ -314,23 +329,29 @@ with col_Data_2:
     # Adding a grid to the Figure
         plt.grid()
         plt.legend(['Reactive Power'],loc='upper right')
-
-      # Showing the plot with the data 
-        var_time  = WTGs_LVRT_HVRT.iloc[2:,0]
-        var_Q     = WTGs_LVRT_HVRT.iloc[2:,1]
+# =============================================================================
+# #         # Showing the plot with the data from WTGs_LVRT_HVRT_Setpoint
+# =============================================================================
+        var_time  = WTGs_LVRT_HVRT_Setpoint.iloc[2:,0]
+        var_LVRT     = WTGs_LVRT_HVRT_Setpoint.iloc[2:,1]
+        plt.plot(var_time ,var_LVRT)
+        plt.savefig("Active Power Set-Point.png")
         plt.plot(var_time ,var_Q)
-        plt.savefig("LVRT.png")
+        plt.savefig("LVRT.png")    
+	    
+      # Showing the plot with the data 
+        #var_time  = WTGs_LVRT_HVRT.iloc[2:,0]
+        #var_Q     = WTGs_LVRT_HVRT.iloc[2:,1]
 
         #--- I select the image from the folder using the Sidebar Selector (above)
                 #image_Pdata = "./Final_Project/"
         st.image("LVRT.png", caption= is_wind)
-       # st.markdown(""Write Conslusion: ", st.text_input("")
+       # st.markdown(""Write Conclusion: ", st.text_input("")
 
     elif is_wind == "FRT for HVRT":
         
-        ####--Create a Figure to be add data
+        ####--Create a Figure to be added 
         plt.figure(constrained_layout=True, figsize =(7, 7))
-
         plt.title('HVRT Analysis',fontweight ="bold",size=18)
         #plt.suptitle('Figure')
         plt.xlabel('"Time in seconds"',size=12)
@@ -341,8 +362,10 @@ with col_Data_2:
         plt.legend(['Reactive Power'],loc='upper right')
 
       # Showing the plot with the data 
-        var_time  = WTGs_LVRT_HVRT.iloc[2:,0]
-        var_Q     = WTGs_LVRT_HVRT.iloc[2:,5]
+        var_time = WTGs_LVRT_HVRT_Setpoint.iloc[2:,0]
+        var_HVRT = WTGs_LVRT_HVRT_Setpoint.iloc[2:,5]
+        #var_time  = WTGs_LVRT_HVRT.iloc[2:,0]
+        #var_Q     = WTGs_LVRT_HVRT.iloc[2:,5]
         plt.plot(var_time ,var_Q)
         plt.savefig("HVRT.png")
 
@@ -353,7 +376,7 @@ with col_Data_2:
         # =============================================================================
         #         Enter Input text for final decision
         if add_radio == "Passed":
-            text = " The analysis of test shown a complied achievement the requeriment by the WTG"  
+            text = " The analysis of test shown a complied achievement the requirement by the WTG"  
         
             text_input = st.text_input("Enter Conclusion of the Test 👇")
             if text_input:
