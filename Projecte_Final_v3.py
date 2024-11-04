@@ -23,7 +23,6 @@ import os
 #     text_input = st.text_input("Enter Conclusion of the Test 👇")
 #     if text_input:
 #         write_box =  st.write("You have entered: ", text_input)
-            
 #     return write_box
 
 # def nopassed():
@@ -32,7 +31,6 @@ import os
 #     text_input = st.text_input("Enter Conclusion of the Test 👇")
 #     if text_input:
 #         write_box = st.write("You have entered: ", text_input)
-        
 #     return write_box
 
 # def triangle_of_power (parameter_active_power, parameter_reactive_power):
@@ -162,7 +160,6 @@ with col_Req_1:
                         response conditions.''')
                                     
         elif is_wind == "Reactive Power":
-            
             text_Q = st.write(''' The aim of this test is to determine the response of the WT to reference commands regarding
                                   the static error, the rise time and the settling time of reactive power using either reactive
                                    power, voltage or cos φ reference values, depending on the wind turbine control system as
@@ -313,7 +310,7 @@ with col_Data_2:
              	st.write("You have entered: "+ text + text_input)
 
     elif is_wind == "FRT for HVRT":
-                ####--Create a Figure to be added 
+        ####--Create a Figure to be added 
         plt.figure(constrained_layout=True, figsize =(7, 7))
         plt.title('HVRT Analysis',fontweight ="bold",size=18)
         #plt.suptitle('Figure')
