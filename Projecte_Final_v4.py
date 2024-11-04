@@ -1,10 +1,8 @@
 # -*- coding: utf-8 -*-
 """
 Created on Thu Oct 17 11:34:29 2024
-
 """
-
-# Import streamlit Library
+# Import Library
 import streamlit as st
 import math
 import matplotlib.pyplot as plt
@@ -29,7 +27,6 @@ def my_pass():
      
      if text_input:
          write_box = st.write("You have entered: ", text_input)
-        
      return write_box
  
 # =============================================================================
@@ -109,8 +106,6 @@ def csv (df_WTG_File, WTGs_analysis, WTGs_LVRT_HVRT):
     
 	return df_WTG_File,WTGs_analysis, WTGs_LVRT_HVRT
 
-
-
 # =============================================================================
 # # #------- Variables -------
 # =============================================================================
@@ -133,26 +128,16 @@ taula_images = {''}
 df_WTG_File = pd.read_csv("WTG_Step_4_25ms.csv")  # read a CSV file inside the 'data" folder next to 'app.py'
 df_WTG_File.to_excel (r'WTG_Step_25ms.xlsx', index = None, header=True)
 df_WTG_File  = df_WTG_File.rename(columns={"All calculations" : "Time in ms"})
-# # To avoid using skiprowns The csv could be changed from int to float
+# # To avoid using skiprows The csv could be changed from int to float
 df_WTG_File.astye('float32')
 WTGs_analysis = pd.read_excel(r"WTG_Step_25ms.xlsx", skiprows=2) # r is used before absolute file path 
-
-# =============================================================================
-# #--------LVRT and HVRT File -------------
-# =============================================================================
-#WTGs_LVRT_HVRT = pd.read_excel(r"LVRT_HVRT.xlsx", skiprows=2)#Fault Ride-though Analysis
-WTGs_LVRT_HVRT_Setpoint = pd.read_excel(r"LVRT_HVRT_Setpoint.xlsx")#Fault Ride-though Analysis
-WTGs_LVRT_HVRT_Setpoint.head()#  Clean Header o fthe file
-# =============================================================================
 df_WTG_File.to_excel (r'WTG_Step_25ms.xlsx', index = None, header=True)
-
-WTGs_analysis = pd.read_excel(r"WTG_Step_25ms.xlsx", skiprows=2) # r is used before absolute file path 
-
 # =============================================================================
 # #--------LVRT and HVRT File -------------
 # =============================================================================
 WTGs_LVRT_HVRT_Setpoint = pd.read_excel(r"LVRT_HVRT_Setpoint.xlsx")#Fault Ride-though Analysis
 WTGs_LVRT_HVRT_Setpoint.head()#  Clean Header o fthe file
+# =============================================================================
 
 # =============================================================================
 # introduce Pag Title (aligned) and intro Web page for reference
@@ -163,7 +148,6 @@ st.markdown("<h1 style='text-align: center; color: grey;'>Instantaneous Performa
 st.header("Analysis of Grid Compliance Tests based in the IEC International Standard")# add a Header fro Title
 
 # link the pag with a website
-
 url = "https://webstore.iec.ch/en/publication/29528"
 st.write("check the Standard with this [link] (%s)" % url,unsafe_allow_html=True)
 #st.markdown("check the Standard in with this [link](%s)" % url,unsafe_allow_html=True)
@@ -192,27 +176,25 @@ with st.sidebar:
 col_Req_1, col_Data_2 = st.columns(2)
 
 with col_Req_1:
-
 #--------------Import png file----------
 # Adding Requeriment Images and create a Table
 #   I can sellect the image
     try: 
 
-        taula_images = { "Active Power"  :"ActiveSet_Point.png", 
-                     "Reactive Power":"Reactive_set_point.png",
-                     "FRT for LVRT"  :"LVRT.png", 
-                     "FRT for HVRT"  :"HVRT.jpg",
-                     "PQ capability" :"PQ_Capability.png",
-                     "Tolerance Band":"Tole_band.png"}
+        taula_images = {"Active Power"  :"ActiveSet_Point.png", 
+                        "Reactive Power":"Reactive_set_point.png",
+                        "FRT for LVRT"  :"LVRT.png", 
+                        "FRT for HVRT"  :"HVRT.jpg",
+                        "PQ capability" :"PQ_Capability.png",
+                        "Tolerance Band":"Tole_band.png"}
                  
 #--- I select the image from the folder using the Sidebar Selector (above)
-   
         image_name = "./img/"+ taula_images[is_wind]
         st.subheader("Requeriment Selected:"  + is_wind)
         st.image(image_name, caption= is_wind, width=350)
 
 # =============================================================================
-# # TEXT TO BE INTRODUCE BELOW each Rqueriment
+# # TEXT TO BE INTRODUCE BELOW each Requirement
 # =============================================================================
 
         if is_wind == "Active Power":
@@ -284,7 +266,6 @@ with col_Data_2:
         plt.savefig("Active Power Set-Point.png")
 
 #--- I select the image from the folder using the Sidebar Selector (above)
-        #image_Pdata = "./Final_Project/"
         st.image("Active Power Set-Point.png", caption= is_wind) 
                 
         # =============================================================================
