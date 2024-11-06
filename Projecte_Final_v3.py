@@ -244,7 +244,7 @@ with col_Data_2:
 
     elif is_wind == "Reactive Power":
         ####--Create a Figure to be added 
-        plt.figure(constrained_layout=True, figsize =(5, 5))
+        plt.figure(constrained_layout=True, figsize =(5, 4))
         plt.title('Reactive Power Set-Point Test',fontweight ="bold",size=18)
         plt.xlabel('"Time in seconds"',size=12)
         plt.ylabel('Reactive Power (Mvar)',size=12)
