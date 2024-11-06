@@ -116,6 +116,16 @@ is_wind = st.sidebar.selectbox(
     "International Standard: Wind turbines –Part 21",
     ("Active Power", "Reactive Power", "FRT for LVRT", "FRT for HVRT", "PQ capability","Tolerance Band")
 )
+###----------------Red box---------------
+
+body {
+    background-color: lightgoldenrodyellow;
+}
+
+div[role="listbox"] ul {
+    background-color: red;
+}
+
 
 # Using "with" notation (this should be linked with the analysis of the plots)
 with st.sidebar:
