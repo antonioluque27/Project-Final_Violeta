@@ -118,13 +118,13 @@ is_wind = st.sidebar.selectbox(
 )
 ###----------------Red box---------------
 
-body {
-    background-color: lightgoldenrodyellow;
-}
+#body {
+#    background-color: lightgoldenrodyellow;
+#}
 
-div[role="listbox"] ul {
-    background-color: red;
-}
+#div[role="listbox"] ul {
+#    background-color: red;
+#}
 
 
 # Using "with" notation (this should be linked with the analysis of the plots)
