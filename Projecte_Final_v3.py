@@ -161,7 +161,7 @@ reach its maximum reactive power.
 • The sampled data for reactive power shall be one fundamental period's average data.
 • The measured reactive power shall be shown in a graph as one fundamental period data
 together with the reference value of reactive power''')
-	    text_P = st.write('''• Measurements shall be sampled during continuous operation only.''')
+	    #text_P = st.write('''• Measurements shall be sampled during continuous operation only.''')
 #• The active and reactive power shall be measured at the WT's terminals.
 #• The active power during the entire control test shall be in the range where the WT can #reach its maximum reactive power.
 #• The sampled data for reactive power shall be one fundamental period's average data.
