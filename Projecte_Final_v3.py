@@ -66,7 +66,8 @@ import os
 
 @st.cache_data
 def csv (df_WTG_File, WTGs_analysis, WTGs_LVRT_HVRT):
-    
+   df_WTG_File = pd.read_csv("WTG_Step_4_25ms.csv")  # read a CSV file inside the 'data" folder next to 'app.py' 
+   WTGs_analysis = pd.read_excel(r"WTG_Step_25ms.xlsx", skiprows=2) # r is used before absolute file path 
 	return df_WTG_File,WTGs_analysis, WTGs_LVRT_HVRT
 
 # =============================================================================
@@ -85,7 +86,7 @@ taula_images = {''}
 # =============================================================================
 # #-----------------Upload CSV file and read it ----------------------------------
 # =============================================================================
-df_WTG_File = pd.read_csv("WTG_Step_4_25ms.csv")  # read a CSV file inside the 'data" folder next to 'app.py'
+#df_WTG_File = pd.read_csv("WTG_Step_4_25ms.csv")  # read a CSV file inside the 'data" folder next to 'app.py'
 df_WTG_File.to_excel (r'WTG_Step_25ms.xlsx', index = None, header=True)
 WTGs_analysis = pd.read_excel(r"WTG_Step_25ms.xlsx", skiprows=2) # r is used before absolute file path 
 
