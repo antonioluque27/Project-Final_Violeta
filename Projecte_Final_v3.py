@@ -244,7 +244,7 @@ with col_Data_2:
 
     elif is_wind == "Reactive Power":
         ####--Create a Figure to be added 
-        plt.figure(constrained_layout=True, figsize =(6, 6))
+        plt.figure(constrained_layout=True, figsize =(5, 5))
         plt.title('Reactive Power Set-Point Test',fontweight ="bold",size=18)
         plt.xlabel('"Time in seconds"',size=12)
         plt.ylabel('Reactive Power (Mvar)',size=12)
@@ -314,7 +314,7 @@ with col_Data_2:
 
     elif is_wind == "FRT for HVRT":
         ####--Create a Figure to be added 
-        plt.figure(constrained_layout=True, figsize =(6, 6))
+        plt.figure(constrained_layout=True, figsize =(5, 5))
         plt.title('HVRT Analysis',fontweight ="bold",size=18)
         #plt.suptitle('Figure')
         plt.xlabel('"Time in seconds"',size=12)
@@ -351,7 +351,7 @@ with col_Data_2:
         var_columns = WTGs_LVRT_HVRT.groupby.iloc[2:,1]
         print (var_columns)
          ####--Create a Figure to be add data
-        plt.figure(constrained_layout=True, figsize =(6, 6))
+        plt.figure(constrained_layout=True, figsize =(5, 5))
 # 
         plt.title('PQ Capability Analysis',fontweight ="bold",size=18)
         plt.xlabel('"Reactive Power"',size=12)
