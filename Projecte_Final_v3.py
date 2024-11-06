@@ -108,7 +108,15 @@ st.markdown("<h1 style='text-align: center; color: grey;'>Instantaneous Performa
 # =============================================================================
 
 #st.markdown("<h1 style='text-align: center; color: grey;'>Layout Information</h1>", unsafe_allow_html=True)
-st.header("1. Layout Information<")# add a Header fro Title
+st.header("1. Layout Information")# add a Header fro Title
+# =============================================================================
+# #--------------Sidebar---------------
+# =============================================================================
+is_wind = st.sidebar.selectbox(
+    "Wind Turbines",
+    ("WT 1", "WT 2", "WT 3", "FWT 4)
+        
+
 
 
 
