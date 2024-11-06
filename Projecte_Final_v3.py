@@ -203,7 +203,7 @@ with col_Data_2:
     if is_wind == "Active Power":
                 
 ####--Create a Figure to be added 
-        plt.figure(constrained_layout=True, figsize =(6, 6))
+        plt.figure(constrained_layout=True, figsize =(5, 4))
         plt.title('Active Power Set-Point',fontweight ="bold",size=18)
         plt.xlabel('"Time in seconds"',size=12)
         plt.ylabel('Active Power (MW)',size=12)
