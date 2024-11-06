@@ -112,10 +112,9 @@ st.header("1. Layout Information")# add a Header fro Title
 # =============================================================================
 # #--------------Sidebar---------------
 # =============================================================================
-is_wind = st.sidebar.selectbox(
-    "Wind Turbines",
-    ("WT 1", "WT 2", "WT 3", "WT 4")
-        
+is_wind = st.sidebar.selectbox( "Wind Turbines",
+                              ("WT 1", "WT 2", "WT 3", "WT 4")
+                               ) 
 
 
 
