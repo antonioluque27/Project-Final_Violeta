@@ -17,8 +17,7 @@ import os
 bt1=st.button('Submit')
 
 if st.session_state.get('button') != True:
-            
-    st.session_state['button'] = bt1
+            st.session_state['button'] = bt1
 if st.session_state['button'] == True:
         
             if rno not in keys_length:
