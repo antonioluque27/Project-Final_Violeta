@@ -101,21 +101,23 @@ WTGs_LVRT_HVRT_Setpoint.head()#  Clean Header o fthe file
 # =============================================================================
 #st.title("Instantaneous Performance of Wind Turbines")  # add a title
 
-st.markdown("<h1 style='text-align: center; color: grey;'>Instantaneous Performance of Wind Turbines</h1>", unsafe_allow_html=True)
-st.header("Analysis of Grid Compliance Tests based in the IEC International Standard")# add a Header fro Title
-
-# link the pag with a website
-url = "https://webstore.iec.ch/en/publication/29528"
-st.write("check the Standard with this [link] (%s)" % url,unsafe_allow_html=True)
-#st.markdown("check the Standard in with this [link](%s)" % url,unsafe_allow_html=True)
-
+st.markdown("<h1 style='text-align: center; color: grey;'>Instantaneous Performance of Wind Turbines< or Wind Farms/h1>", unsafe_allow_html=True)
 
 # =============================================================================
 # # #------ Layout Information -------
 # =============================================================================
 
-st.markdown("<h1 style='text-align: center; color: grey;'>Layout Information</h1>", unsafe_allow_html=True)
-#st.header("Analysis of Grid Compliance Tests based in the IEC International Standard")# add a Header fro Title
+#st.markdown("<h1 style='text-align: center; color: grey;'>Layout Information</h1>", unsafe_allow_html=True)
+st.header("1. Layout Information<")# add a Header fro Title
+
+
+
+st.header("2. Analysis of Grid Compliance Tests based in the IEC International Standard")# add a Header fro Title
+
+# link the pag with a website
+url = "https://webstore.iec.ch/en/publication/29528"
+st.write("check the Standard with this [link] (%s)" % url,unsafe_allow_html=True)
+#st.markdown("check the Standard in with this [link](%s)" % url,unsafe_allow_html=True)
 
 
 # =============================================================================
