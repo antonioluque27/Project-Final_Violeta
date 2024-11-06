@@ -4,9 +4,21 @@ Created on Wed Nov  6 16:31:51 2024
 
 @author: Admin01
 """
+# Import streamlit Library
+import streamlit as st
+import math
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+# importing subprocess module 
+import subprocess
+import os
+
 bt1=st.button('Submit')
+
 if st.session_state.get('button') != True:
-            st.session_state['button'] = bt1
+            
+    st.session_state['button'] = bt1
 if st.session_state['button'] == True:
         
             if rno not in keys_length:
