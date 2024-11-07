@@ -273,7 +273,7 @@ with col_Data_2:
         plt.legend(['Reactive Power'],loc='upper right')
         var_time  = WTGs_LVRT_HVRT_Setpoint.iloc[2:,9]
         var_Q     = WTGs_LVRT_HVRT_Setpoint.iloc[2:,10]
-        plt.plot(var_time ,var_Q)
+        plt.plot(var_time ,var_Q, color='red')
         plt.savefig("Reactive Power Set-Point.png")
 
         #--- I select the image from the folder using the Sidebar Selector (above)
@@ -309,7 +309,7 @@ with col_Data_2:
 # =============================================================================
         var_time  = WTGs_LVRT_HVRT_Setpoint.iloc[2:,0]
         var_LVRT  = WTGs_LVRT_HVRT_Setpoint.iloc[2:,1]
-        plt.plot(var_time ,var_LVRT)
+        plt.plot(var_time ,var_LVRT, color='red')
         plt.savefig("LVRT.png")    
  #--- I select the image from the folder using the Sidebar Selector (above)
         st.image("LVRT.png", caption= is_wind)
@@ -344,7 +344,7 @@ with col_Data_2:
       # Showing the plot with the data 
         var_time = WTGs_LVRT_HVRT_Setpoint.iloc[2:,0]
         var_HVRT = WTGs_LVRT_HVRT_Setpoint.iloc[2:,5]
-        plt.plot(var_time ,var_HVRT)
+        plt.plot(var_time ,var_HVRT, color='red')
         plt.savefig("HVRT.png")
 
         #--- I select the image from the folder using the Sidebar Selector (above)
