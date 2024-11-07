@@ -166,19 +166,19 @@ with col_Req_1:
                     
 #--- I select the image from the folder using the Sidebar Selector (above)
         image_name = "./img/"+ taula_images[is_wind]
-        st.subheader("Requeriment Selected:"  + is_wind)
+        st.subheader("Requeriment Selected:"\n  + is_wind)
         st.image(image_name, caption= is_wind, width=350)
 
 # =============================================================================
 # # TEXT TO BE INTRODUCE BELOW each Requirement
 # =============================================================================
         if is_wind == "Active Power":
-            text_P = st.write('''Procedure:\n 
+            text_P = st.write('''Procedure:\n
 	    • Measurements shall be sampled during continuous operation only.\n
      • The active and reactive power shall be measured at the WT's terminals.\n
-	    • The active power during the entire control test shall be in the range where the WT canreach its maximum reactive power.\n  
-            • The sampled data for reactive power shall be one fundamental period's average data.\n
-            • The measured reactive power shall be shown in a graph as one fundamental period data together with the reference value of reactive power."''')
+     • The active power during the entire control test shall be in the range where the WT canreach its maximum reactive power.\n
+     • The sampled data for reactive power shall be one fundamental period's average data.\n
+     • The measured reactive power shall be shown in a graph as one fundamental period data together with the reference value of reactive power."''')
 		
         elif is_wind == "Reactive Power":
             text_Q = st.write(''' The aim of this test is to determine the response of the WT to reference commands regarding
