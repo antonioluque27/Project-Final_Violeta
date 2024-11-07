@@ -101,7 +101,7 @@ WTGs_LVRT_HVRT_Setpoint.head()#  Clean Header o fthe file
 # =============================================================================
 #st.title("Instantaneous Performance of Wind Turbines")  # add a title
 
-st.markdown("<h1 style='text-align: center; color: grey;'>Instantaneous Performance of Wind Turbines< or Wind Farms/h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center; color: grey;'>Instantaneous Performance of Wind Turbines or Wind Farms", unsafe_allow_html=True)
 
 # =============================================================================
 # # #------ Layout Information -------
