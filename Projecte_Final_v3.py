@@ -65,10 +65,10 @@ import os
 #     return calculated_active_power,calculated_reactive_power
 
 @st.cache_data
-def csv (df_WTG_File, WTGs_analysis, WTGs_LVRT_HVRT):
+def csv (df_WTG_File, WTGs_analysis):
    df_WTG_File = pd.read_csv("WTG_Step_4_25ms.csv")  # read a CSV file inside the 'data" folder next to 'app.py' 
-   #WTGs_analysis = pd.read_excel(r"WTG_Step_25ms.xlsx", skiprows=2) # r is used before absolute file path 
-	return df_WTG_File,WTGs_analysis, WTGs_LVRT_HVRT
+   WTGs_analysis = pd.read_excel(r"WTG_Step_25ms.xlsx", skiprows=2) # r is used before absolute file path 
+	return df_WTG_File,WTGs_analysis
 
 # =============================================================================
 # # #------- Variables -------
