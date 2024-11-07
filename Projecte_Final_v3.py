@@ -166,7 +166,7 @@ with col_Req_1:
                     
 #--- I select the image from the folder using the Sidebar Selector (above)
         image_name = "./img/"+ taula_images[is_wind]
-        st.subheader("Requeriment Selected:" ' ' + is_wind)
+        st.subheader("Requeriment Selected:" + \n + is_wind)
         st.image(image_name, caption= is_wind, width=350)
 
 # =============================================================================
