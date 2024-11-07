@@ -174,10 +174,10 @@ with col_Req_1:
 # =============================================================================
         if is_wind == "Active Power":
             text_P = st.write('''Procedure:\n 
-	    "• Measurements shall be sampled during continuous operation only.", "• The active and reactive power shall be measured at the WT's terminals."\n ,
-	    "• The active power during the entire control test shall be in the range where the WT canreach its maximum reactive power.", 
-            "• The sampled data for reactive power shall be one fundamental period's average data."
-            "• The measured reactive power shall be shown in a graph as one fundamental period data together with the reference value of reactive power"''')
+	    • Measurements shall be sampled during continuous operation only.", "• The active and reactive power shall be measured at the WT's terminals.\n ,
+	    • The active power during the entire control test shall be in the range where the WT canreach its maximum reactive power.\n  
+            • The sampled data for reactive power shall be one fundamental period's average data.\n
+            • The measured reactive power shall be shown in a graph as one fundamental period data together with the reference value of reactive power"''')
 		
         elif is_wind == "Reactive Power":
             text_Q = st.write(''' The aim of this test is to determine the response of the WT to reference commands regarding
