@@ -14,25 +14,31 @@ import pandas as pd
 import subprocess
 import os
 
-bt1=st.button('Submit')
+sentence = st.text_input('Input your sentence here:') 
 
-if st.session_state.get('button') != True:
-            st.session_state['button'] = bt1
-if st.session_state['button'] == True:
+if sentence:
+    st.write(my_model.predict(sentence))
+
+
+#bt1=st.button('Submit')
+
+#if st.session_state.get('button') != True:
+#            st.session_state['button'] = bt1
+#if st.session_state['button'] == True:
         
-            if rno not in keys_length:
-                st.warning('🚨 Roll Number Incorrect! 😱')
-            else:
-                conn=sqlite3.connect('vitap.db')
-                query='select name from vitap2 where roll_number = ?;'
-                old_name=[i[0] for i in conn.execute(query,(rno,))]
-                conn.commit()
-                conn.close()
-                st.success('🔑 Roll Number Correct! 🎉')
-                new_name=st.text_input('Enter new name')
-                if st.button('Update'):
-                    st.session_state['button'] = False
-                    st.success(updated_new_name_funcion(new_name,rno))
-                    st.balloons()
-                    st.write('Old Name: {}'.format(old_name[0]))
-                    st.write('New Name: {}'.format(new_name))
+#            if rno not in keys_length:
+#                st.warning('🚨 Roll Number Incorrect! 😱')
+#            else:
+#                conn=sqlite3.connect('vitap.db')
+#                query='select name from vitap2 where roll_number = ?;'
+#                old_name=[i[0] for i in conn.execute(query,(rno,))]
+#                conn.commit()
+ #               conn.close()
+  #              st.success('🔑 Roll Number Correct! 🎉')
+   #             new_name=st.text_input('Enter new name')
+    #            if st.button('Update'):
+     #               st.session_state['button'] = False
+      #              st.success(updated_new_name_funcion(new_name,rno))
+       #             st.balloons()
+        #            st.write('Old Name: {}'.format(old_name[0]))
+         #           st.write('New Name: {}'.format(new_name))
