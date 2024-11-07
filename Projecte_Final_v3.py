@@ -188,19 +188,19 @@ with col_Req_1:
 
         elif  is_wind == "FRT for LVRT":
             text_LVRT = st.write('''The ability of a wind turbine or wind power plant to stay connected during voltage dips.
-                                 The test is intended to verify the wind turbine response to Undervoltage. 
+                                 The test is intended to verify the wind turbine response to Undervoltage.\n 
                                  events (due to e.g. grid faults, switching operations) and provide a basis for wind turbine
                                  numerical simulation model validation. ''')
 
         elif  is_wind == "FRT for HVRT":
             text_HVRT = st.write('''The ability of a wind turbine or wind power plant to stay connected during voltage dips.
-                                 The test is intended to verify the wind turbine response to Undervoltage. 
+                                 The test is intended to verify the wind turbine response to Undervoltage. \n
                                  events (due to e.g. grid faults, switching operations) and providing a basis for wind turbine
                                  numerical simulation model validation. ''')
              
         elif  is_wind == "PQ capability":
             text_PQ = st.write(''' The ability of a wind turbine or wind power plant to stay connected during voltage dips.
-                                 The test is intended to verify the wind turbine response to Undervoltage. 
+                                 The test is intended to verify the wind turbine response to Undervoltage. \n
                                  events (due to e.g. grid faults, switching operations) and providing a basis for wind turbine
                                  numerical simulation model validation. ''')
 
