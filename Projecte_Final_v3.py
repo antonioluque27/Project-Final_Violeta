@@ -332,7 +332,7 @@ with col_Data_2:
 
     elif is_wind == "FRT for HVRT":
         ####--Create a Figure to be added 
-        plt.figure(constrained_layout=True, figsize =(5, 3))
+        plt.figure(constrained_layout=True, figsize =(5, 3.5))
         plt.title('HVRT Analysis',fontweight ="bold",size=18)
         #plt.suptitle('Figure')
         plt.xlabel('"Time in seconds"',size=12)
