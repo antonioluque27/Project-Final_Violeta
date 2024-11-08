@@ -130,8 +130,8 @@ st.write("check the Standard with this [link] (%s)" % url,unsafe_allow_html=True
 # #--------------# Upload Pdf---------------
 # =============================================================================
 uploaded_file = st.file_uploader('IEC 61400-21-2008.pdf file', type=('pdf'), key='pdf')
-if ss.pdf:
-    ss.pdf_ref = ss.pdf  # backup
+if uploaded_file is not None:
+    df = extract_data(uploaded_file)
 
 # =============================================================================
 # #--------------Sidebar---------------
