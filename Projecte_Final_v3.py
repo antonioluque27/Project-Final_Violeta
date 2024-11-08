@@ -131,8 +131,7 @@ st.write("check the Standard with this [link] (%s)" % url,unsafe_allow_html=True
 # =============================================================================
 uploaded_file = st.file_uploader('IEC 61400-21-2008.pdf file', type="pdf")
 if uploaded_file is not None:
-    df_pdf = extract_data(uploaded_file)
-
+    df = extract_data(uploaded_file)
 
 # =============================================================================
 # #--------------Sidebar---------------
