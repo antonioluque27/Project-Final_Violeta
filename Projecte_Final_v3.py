@@ -217,7 +217,7 @@ with col_Req_1:
 # =============================================================================
 with col_Data_2:
          ####-- Header and Subheader
-    st.subheader("Requeriment Analysed:"  + is_wind)
+    st.subheader("Requeriment Analysed:\n"  + is_wind)
     if is_wind == "Active Power":
                 
 ####--Create a Figure to be added 
