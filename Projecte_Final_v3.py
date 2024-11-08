@@ -120,11 +120,18 @@ is_wind = st.sidebar.selectbox( "Wind Turbines",
 
 
 st.header("2. Analysis of Grid Compliance Tests based in the IEC International Standard")# add a Header fro Title
-
-# link the pag with a website
+# =============================================================================
+# #--------------# link the pag with a website---------------
+# =============================================================================
 url = "https://webstore.iec.ch/en/publication/29528"
 st.write("check the Standard with this [link] (%s)" % url,unsafe_allow_html=True)
 #st.markdown("check the Standard in with this [link](%s)" % url,unsafe_allow_html=True)
+# =============================================================================
+# #--------------# Upload Pdf---------------
+# =============================================================================
+uploaded_file = st.file_uploader('IEC 61400-21-2008.pdf file', type="pdf")
+if uploaded_file is not None:
+    df_pdf = extract_data(uploaded_file)
 
 
 # =============================================================================
