@@ -118,7 +118,7 @@ is_wind = st.sidebar.selectbox( "Wind Turbines",
 type_Activity = st.text_input('Choose')
 
 # Every form must have a submit button.
-submitted = st.form_submit_button("Choose")
+#submitted = st.form_submit_button("Choose")
 
 
 
