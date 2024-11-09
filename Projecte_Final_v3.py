@@ -115,12 +115,12 @@ st.header("1. System Layout")# add a Header foR Title
 # #--------------Tables of Images and Setting---------------
 # =============================================================================
 
-taula_WT = {"Wind Turbine"  :"GE", 
-	    "Prated Power":"2500 MW",
-	    "Lenght Blades"  :"125 metres", 
-	    "CosPhi"  :"25 Degree",
+taula_WT = {"Wind Turbine":"GE", 
+	    "Prated"      :"2500 MW",
+	    "Swept area"  :"7,854.0 m²", 
+	    "CosPhi"      :"25 Degree",
 	    "Cut-in/Cut-out wind speed" :"3m/s (9 mph)/25 m/s (55 mph)",
-	    "Operational data":"690 V (50 Hz/60 Hz)"}
+	    "Operational data"          :"690 V (50 Hz/60 Hz)"}
 
 
 # =============================================================================
@@ -130,7 +130,7 @@ is_type = st.sidebar.selectbox( "Choose of Type",("Wind Turbines", "Wind Farm")
 			        )
 
 #--- I select the image from the folder using the Sidebar Selector (above)
-      #  image_name = "./img/"+ taula_images[is_wind]
+      #  image_name = "./img/"+ taula_WT[is_wind]
       #  st.subheader("Requeriment Selected:\n"  + is_wind)
        # st.image(image_name, caption= is_wind, width=350)
 
@@ -139,6 +139,11 @@ is_type = st.sidebar.selectbox( "Choose of Type",("Wind Turbines", "Wind Farm")
 type_Activity = is_type
 if st.button('Check Specifications'):
     have_it = type_Activity.lower() in is_type
+#--- I select the Parameters from the folder using the Sidebar Selector
+    st.write( taula_WT[is_wind])
+
+   
+        
 
 
 
@@ -146,8 +151,8 @@ if st.button('Check Specifications'):
 if is_type == "Wind Turbines":
 	st.write('''
  Wind Turbine Type:\n
- Prated Power:\n
- Lenght Blades:\n
+ Prated:\n
+ Length Blades:\n
  CosPhi:''')
 
 else:
