@@ -79,7 +79,7 @@ import os
 # tang_phi       = 0.434 # Angle is similar than 25 degree
 taula_images = {''}
 taula_WT     = {''}
-WTsnumber    = 10
+WTs_number   = 10
 # var_iloc_P     = []
 # var_iloc_Q     = []
 # var_iloc_time  = []
@@ -140,12 +140,7 @@ type_Activity = is_type
 if st.button('Check Specifications'):
     have_it = type_Activity.lower() in is_type
 #--- I select the Parameters from the folder using the Sidebar Selector
-    st.write( taula_WT[is_wind])
-
-   
-        
-
-
+    st.write(taula_WT[is_wind])
 
 
 if is_type == "Wind Turbines":
@@ -156,7 +151,7 @@ if is_type == "Wind Turbines":
  CosPhi:''')
 
 else:
-	st.write(" Wind Farm Capacity:")
+	st.write(" Wind Farm Capacity:"+ (WTs_number*Prated.values)
 # Every form must have a submit button.
 #submitted = st.form_submit_button("Choose")
 
