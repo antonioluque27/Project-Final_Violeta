@@ -70,8 +70,7 @@ import os
 #	return df_WTG_File,WTGs_analysis
 
 # =============================================================================
-# # #------- Variables -------
-# =============================================================================
+# # #------- Variables ------- ===========================================================================
 # apparent_power = 0 
 # #cosphi_tang    = 0
 # calculated_active_power   = 0
@@ -83,9 +82,8 @@ WTs_number   = 10
 # var_iloc_P     = []
 # var_iloc_Q     = []
 # var_iloc_time  = []
-        
-# =============================================================================
-# #-----------------Upload CSV file and read it ----------------------------------
+         =============================================================================
+# #-------Upload CSV file and read it ----------------------------------
 # =============================================================================
 df_WTG_File = pd.read_csv("WTG_Step_4_25ms.csv")  # read a CSV file inside the 'data" folder next to 'app.py'
 df_WTG_File.to_excel (r'WTG_Step_25ms.xlsx', index = None, header=True)
@@ -148,8 +146,8 @@ if is_type == "Wind Turbines":
  Length Blades:\n
  CosPhi:''')
 
-else:
-	st.write("Wind Farm Capacity:"+ (WTs_number*Prated[values])
+#------else:
+	#------st.write("Wind Farm Capacity:"+ (WTs_number*Prated[values])
 		 
 # Every form must have a submit button.
 #submitted = st.form_submit_button("Choose")
