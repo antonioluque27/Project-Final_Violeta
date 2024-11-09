@@ -131,9 +131,9 @@ if st.button('Check Specifications'):
 
 if is_type == "Wind Turbines":
 	st.write('''Wind Turbine Type:\n,
- 	            Rated Power:\n
-	            longer blades:\n
-	            CosPhi:''')
+ Prated Power:\n
+ Longer blades:\n
+ CosPhi:''')
 
 else:
 	st.write(" Wind Farm Capacity:")
@@ -223,7 +223,7 @@ with col_Req_1:
 
         elif  is_wind == "FRT for HVRT":
             text_HVRT = st.write('''The ability of a wind turbine or wind power plant to stay connected during voltage dips.
-                                 The test is intended to verify the wind turbine response to Undervoltage. \n
+                                 The test is intended to verify the wind turbine response to Undervoltage.\n
                                  events (due to e.g. grid faults, switching operations) and providing a basis for wind turbine
                                  numerical simulation model validation. ''')
              
