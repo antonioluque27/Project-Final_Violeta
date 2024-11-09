@@ -131,8 +131,8 @@ if st.button('Check Specifications'):
 
 if is_type == "Wind Turbines":
 	st.write('''Wind Turbine Type:\n,
- 	            Rated Power:
-	            longer blades:
+ 	            Rated Power:\n
+	            longer blades:\n
 	            CosPhi:''')
 
 else:
