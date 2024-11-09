@@ -115,12 +115,12 @@ st.header("1. System Layout")# add a Header foR Title
 # #--------------Tables of Images and Setting---------------
 # =============================================================================
 
-        taula_WT = {"Wind Turbine"  :"GE", 
-                        "Prated Power":"2500 MW",
-                        "Lenght Blades"  :"125 metres", 
-                        "CosPhi"  :"25 Degree",
-                        "Cut-in/Cut-out wind speed" :"3m/s (9 mph)/25 m/s (55 mph)",
-                        "Operational data":"690 V (50 Hz/60 Hz)"}
+taula_WT = {"Wind Turbine"  :"GE", 
+	    "Prated Power":"2500 MW",
+	    "Lenght Blades"  :"125 metres", 
+	    "CosPhi"  :"25 Degree",
+	    "Cut-in/Cut-out wind speed" :"3m/s (9 mph)/25 m/s (55 mph)",
+	    "Operational data":"690 V (50 Hz/60 Hz)"}
 
 
 # =============================================================================
