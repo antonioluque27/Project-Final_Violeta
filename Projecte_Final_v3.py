@@ -78,6 +78,8 @@ import os
 # calculated_reactive_power = 0
 # tang_phi       = 0.434 # Angle is similar than 25 degree
 taula_images = {''}
+taula_WT     = {''}
+WTsnumber    = 10
 # var_iloc_P     = []
 # var_iloc_Q     = []
 # var_iloc_time  = []
@@ -108,6 +110,19 @@ st.markdown("<h1 style='text-align: center; color: grey;'>Instantaneous Performa
 
 #st.markdown("<h1 style='text-align: center; color: grey;'>Layout Information</h1>", unsafe_allow_html=True)
 st.header("1. System Layout")# add a Header foR Title
+
+# =============================================================================
+# #--------------Tables of Images and Setting---------------
+# =============================================================================
+
+        taula_WT = {"Wind Turbine"  :"GE", 
+                        "Prated Power":"2500 MW",
+                        "Lenght Blades"  :"125 metres", 
+                        "CosPhi"  :"25 Degree",
+                        "Cut-in/Cut-out wind speed" :"3m/s (9 mph)/25 m/s (55 mph)",
+                        "Operational data":"690 V (50 Hz/60 Hz)"}
+
+
 # =============================================================================
 # #--------------Sidebar---------------
 # =============================================================================
@@ -132,7 +147,7 @@ if is_type == "Wind Turbines":
 	st.write('''
  Wind Turbine Type:\n
  Prated Power:\n
- Longer blades:\n
+ Lenght Blades:\n
  CosPhi:''')
 
 else:
