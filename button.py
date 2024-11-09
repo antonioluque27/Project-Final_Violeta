@@ -25,11 +25,10 @@ with st.form("my_form"):
 #    st.write("slider", slider_val, "checkbox", checkbox_val)
 #st.write("Outside the form")
 
-import streamlit as st
 
 animal_shelter = ['cat', 'dog', 'rabbit', 'bird']
 
-animal = st.text_input('Type an animal')
+animal = st.text_input('Type')
 
 if st.button('Check availability'):
     have_it = animal.lower() in animal_shelter
