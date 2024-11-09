@@ -115,7 +115,8 @@ st.header("1. Layout Information")# add a Header fro Title
 is_wind = st.sidebar.selectbox( "Wind Turbines",
                               ("WT", "Wind Farm", )
                                ) 
-
+# Every form must have a submit button.
+submitted = st.form_submit_button("Choose")
 
 
 
