@@ -149,7 +149,8 @@ if is_type == "Wind Turbines":
  CosPhi:''')
 
 else:
-	st.write("Wind Farm Capacity:"+ (WTs_number*"Prated"(values))
+	st.write("Wind Farm Capacity:"+ (WTs_number*Prated[values])
+		 
 # Every form must have a submit button.
 #submitted = st.form_submit_button("Choose")
 
