@@ -114,8 +114,8 @@ st.header("1. System Layout")# add a Header fro Title
 # =============================================================================
 is_type = st.sidebar.selectbox( "Choose of Type",("Wind Turbines", "Wind Farm")
 			        )
-type_Activity = st.text_input('Choose')
-
+#type_Activity = st.text_input('Choose')
+type_Activity = st.text_input('Choose'+ is_type)
 if st.button('Check'):
     have_it = type_Activity.lower() in is_type
 
