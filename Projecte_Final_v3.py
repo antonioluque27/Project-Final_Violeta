@@ -107,14 +107,12 @@ st.markdown("<h1 style='text-align: center; color: grey;'>Instantaneous Performa
 # =============================================================================
 # # #------ Layout Information -------
 # =============================================================================
-
 #st.markdown("<h1 style='text-align: center; color: grey;'>Layout Information</h1>", unsafe_allow_html=True)
 st.header("1. System Layout")# add a Header foR Title
 
 # =============================================================================
 # #--------------Tables of Images and Setting---------------
 # =============================================================================
-
 taula_WT = {"Wind Turbine":"GE", 
 	    "Prated"      :"2500 MW",
 	    "Swept area"  :"7,854.0 m²", 
@@ -151,7 +149,7 @@ if is_type == "Wind Turbines":
  CosPhi:''')
 
 else:
-	st.write(" Wind Farm Capacity:"+ (WTs_number*Prated.values)
+	st.write("Wind Farm Capacity:"+ (WTs_number*"Prated"(values))
 # Every form must have a submit button.
 #submitted = st.form_submit_button("Choose")
 
