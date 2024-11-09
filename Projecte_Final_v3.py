@@ -118,7 +118,7 @@ type_Activity = st.text_input('Choose')
 if st.button('Check'):
     have_it = type_Activity.lower() in is_type
 
-if is_type == "Wind Turbines"
+if is_type == "Wind Turbines":
 	st.write(" Wind Turbine Type:")
 	st.write(" Rated Power:")
 
