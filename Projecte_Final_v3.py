@@ -120,9 +120,12 @@ if st.button('Check'):
     have_it = type_Activity.lower() in is_type
 
 if is_type == "Wind Turbines":
-	st.write(" Wind Turbine Type:")
-	st.write(" Rated Power:")
+	st.write('''Wind Turbine Type:\n,
+ 	            Rated Power:
+	            CosPhi:''')
 
+else:
+	st.write(" Wind Farm Capacity:")
 # Every form must have a submit button.
 #submitted = st.form_submit_button("Choose")
 
