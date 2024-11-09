@@ -136,10 +136,10 @@ type_Activity = is_type
 if st.button('Check Specifications'):
     have_it = type_Activity.lower() in is_type
 #--- I select the Parameters from the folder using the Sidebar Selector
-    st.write(taula_WT[is_wind])
+ #-------   st.write(taula_WT[is_wind])
 
 
-if is_type == "Wind Turbines":
+#-------if is_type == "Wind Turbines":
 	st.write('''
  Wind Turbine Type:\n
  Prated:\n
