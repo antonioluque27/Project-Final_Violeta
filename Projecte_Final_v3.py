@@ -15,7 +15,6 @@ import os
 # =============================================================================
 # # #------ Declaration of Definition -------
 # =============================================================================
-
 # def my_pass():
     
 #     text = " The analysis of the requeriment shown a complied achievement the requeriment by the WTG"  
@@ -130,7 +129,8 @@ if st.button('Check Specifications'):
 
 
 if is_type == "Wind Turbines":
-	st.write('''Wind Turbine Type:\n,
+	st.write('''
+ Wind Turbine Type:\n
  Prated Power:\n
  Longer blades:\n
  CosPhi:''')
