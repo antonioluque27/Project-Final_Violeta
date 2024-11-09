@@ -115,6 +115,8 @@ st.header("1. System Layout")# add a Header fro Title
 is_wind = st.sidebar.selectbox( "Wind Turbines",
                               ("WT", "Wind Farm", )
                                ) 
+type_Activity = st.text_input('Choose')
+
 # Every form must have a submit button.
 submitted = st.form_submit_button("Choose")
 
