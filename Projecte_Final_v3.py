@@ -108,16 +108,26 @@ st.markdown("<h1 style='text-align: center; color: grey;'>Instantaneous Performa
 # =============================================================================
 
 #st.markdown("<h1 style='text-align: center; color: grey;'>Layout Information</h1>", unsafe_allow_html=True)
-st.header("1. System Layout")# add a Header fro Title
+st.header("1. System Layout")# add a Header foR Title
 # =============================================================================
 # #--------------Sidebar---------------
 # =============================================================================
 is_type = st.sidebar.selectbox( "Choose of Type",("Wind Turbines", "Wind Farm")
 			        )
-#type_Activity = st.text_input('Choose')
-type_Activity = st.text_input('Choose:'+ is_type)
+
+#--- I select the image from the folder using the Sidebar Selector (above)
+      #  image_name = "./img/"+ taula_images[is_wind]
+      #  st.subheader("Requeriment Selected:\n"  + is_wind)
+       # st.image(image_name, caption= is_wind, width=350)
+
+
+#-type_Activity = st.text_input('Choose:'+ is_type)
+type_Activity = is_type
 if st.button('Check Specifications'):
     have_it = type_Activity.lower() in is_type
+
+
+
 
 if is_type == "Wind Turbines":
 	st.write('''Wind Turbine Type:\n,
