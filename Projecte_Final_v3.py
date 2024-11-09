@@ -112,10 +112,13 @@ st.header("1. System Layout")# add a Header fro Title
 # =============================================================================
 # #--------------Sidebar---------------
 # =============================================================================
-is_wind = st.sidebar.selectbox( "Wind Turbines",
+is_type = st.sidebar.selectbox( "Wind Turbines",
                               ("WT", "Wind Farm", )
                                ) 
 type_Activity = st.text_input('Choose')
+
+if st.button('Check availability'):
+    have_it = type_Activity.lower() in is_type
 
 # Every form must have a submit button.
 #submitted = st.form_submit_button("Choose")
