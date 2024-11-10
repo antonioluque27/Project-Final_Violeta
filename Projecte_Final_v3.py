@@ -116,7 +116,7 @@ st.header("1. System Layout")# add a Header foR Title
 taula_WT = {"Wind Turbine":"GE", 
 	    "Prated"      :"2500 MW",
 	    "Swept area"  :"7,854.0 m²", 
-	    "CosPhi"      :"25 Degree",
+	    "Angle Transmission"        :"25 Degree",
 	    "Cut-in/Cut-out wind speed" :"3m/s (9 mph)/25 m/s (55 mph)",
 	    "Operational data"          :"690 V (50 Hz/60 Hz)"}
 
@@ -145,8 +145,9 @@ if is_type == "Wind Turbines":
 	st.write('''
  Wind Turbine Type:\n
  Prated:\n
- Length Blades:\n
- CosPhi:''')
+ Angle Transmission:\n
+ Cut-in/Cut-out wind speed:\n
+ Operational data:''')
 
 #------else:
 	#------st.write("Wind Farm Capacity:"+ (WTs_number*Prated[values])
