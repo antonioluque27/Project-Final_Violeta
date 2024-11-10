@@ -149,8 +149,9 @@ if is_type == "Wind Turbines":
  Cut-in/Cut-out wind speed:\n
  Operational data:''')
 
-#------else:
-	#------st.write("Wind Farm Capacity:"+ (WTs_number*Prated[values])
+else:
+	st.write("Wind Farm Capacity:")
+	#+ (WTs_number*Prated[values])
 		 
 # Every form must have a submit button.
 #submitted = st.form_submit_button("Choose")
