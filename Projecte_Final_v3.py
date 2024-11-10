@@ -132,7 +132,6 @@ is_type = st.sidebar.selectbox( "Choose of Type",("Wind Turbines", "Wind Farm")
       #  st.subheader("Requeriment Selected:\n"  + is_wind)
        # st.image(image_name, caption= is_wind, width=350)
 
-
 #-type_Activity = st.text_input('Choose:'+ is_type)
 type_Activity = is_type
 if st.button('Check Specifications'):
@@ -143,11 +142,11 @@ if st.button('Check Specifications'):
 
 	if is_type == "Wind Turbines":
 		st.write('''
- Wind Turbine Type:\n
- Prated:\n
- Angle Transmission:\n
- Cut-in/Cut-out wind speed:\n
- Operational data:''')
+  Wind Turbine Type:\n
+  Prated:\n
+  Angle Transmission:\n
+  Cut-in/Cut-out wind speed:\
+  Operational data:''')
 
 	else:
 		st.write("Wind Farm Capacity:"+ WTs_number*Prated[0])
