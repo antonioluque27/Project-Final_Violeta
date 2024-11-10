@@ -76,7 +76,7 @@ import os
 # #cosphi_tang    = 0
 # calculated_active_power   = 0
 # calculated_reactive_power = 0
-# tang_phi       = 0.434 # Angle is similar than 25 degree
+# tang_phi       = 0.434 # Angle is similar to 25 degree
 taula_images = {''}
 taula_WT     = {''}
 WTs_number   = 10
@@ -150,7 +150,7 @@ if is_type == "Wind Turbines":
  Operational data:''')
 
 else:
-	st.write("Wind Farm Capacity:"+ (WTs_number*Prated[0])
+	st.write("Wind Farm Capacity:"+ WTs_number*Prated[0])
 		 
 # Every form must have a submit button.
 #submitted = st.form_submit_button("Choose")
