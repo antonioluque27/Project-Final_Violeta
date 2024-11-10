@@ -140,7 +140,8 @@ if st.button('Check Specifications'):
   Operational data:''')
 
 	else:
-		st.write("Wind Farm Capacity:"+ WTs_number*taula_WT[Prated])
+		st.write("Wind Farm Capacity:"+ WTs_number*taula_WT.Prated[1])
+		#taula_images[is_wind]
 		 
 # Every form must have a submit button.
 #submitted = st.form_submit_button("Choose")
