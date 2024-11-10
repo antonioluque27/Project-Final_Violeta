@@ -141,16 +141,16 @@ if st.button('Check Specifications'):
  #-------   st.write(taula_WT[is_wind])
 
 
-if is_type == "Wind Turbines":
-	st.write('''
+	if is_type == "Wind Turbines":
+		st.write('''
  Wind Turbine Type:\n
  Prated:\n
  Angle Transmission:\n
  Cut-in/Cut-out wind speed:\n
  Operational data:''')
 
-else:
-	st.write("Wind Farm Capacity:"+ WTs_number*Prated[0])
+	else:
+		st.write("Wind Farm Capacity:"+ WTs_number*Prated[0])
 		 
 # Every form must have a submit button.
 #submitted = st.form_submit_button("Choose")
