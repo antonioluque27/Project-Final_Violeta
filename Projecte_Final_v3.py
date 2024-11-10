@@ -122,23 +122,15 @@ taula_WT = {"Wind Turbine":"GE",
 
 
 # =============================================================================
-# #--------------Sidebar---------------
+# #--------------Sidebar-for WT or WF--------------
 # =============================================================================
 is_type = st.sidebar.selectbox( "Choose of Type",("Wind Turbines", "Wind Farm")
 			        )
-
-#--- I select the image from the folder using the Sidebar Selector (above)
-      #  image_name = "./img/"+ taula_WT[is_wind]
-      #  st.subheader("Requeriment Selected:\n"  + is_wind)
-       # st.image(image_name, caption= is_wind, width=350)
 
 #-type_Activity = st.text_input('Choose:'+ is_type)
 type_Activity = is_type
 if st.button('Check Specifications'):
     have_it = type_Activity.lower() in is_type
-#--- I select the Parameters from the folder using the Sidebar Selector
- #-------   st.write(taula_WT[is_wind])
-
 
 	if is_type == "Wind Turbines":
 		st.write('''
@@ -149,7 +141,7 @@ if st.button('Check Specifications'):
   Operational data:''')
 
 	else:
-		st.write("Wind Farm Capacity:"+ WTs_number*Prated[0])
+		st.write("Wind Farm Capacity:"+ WTs_number*taula_WT[Prated])
 		 
 # Every form must have a submit button.
 #submitted = st.form_submit_button("Choose")
