@@ -141,7 +141,7 @@ if st.button('Check Specifications'):
  #-------   st.write(taula_WT[is_wind])
 
 
-#-------if is_type == "Wind Turbines":
+if is_type == "Wind Turbines":
 	st.write('''
  Wind Turbine Type:\n
  Prated:\n
