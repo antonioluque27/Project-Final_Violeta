@@ -134,7 +134,7 @@ if st.button('Check Specifications'):
 	if is_type == "Wind Turbines":
 		st.write('''
   Wind Turbine Type:\n
-  Prated:\n
+  Prated:+ taula_WT['Prated']\n
   Angle Transmission:\n
   Cut-in/Cut-out wind speed:\
   Operational data:''')
