@@ -133,11 +133,12 @@ if st.button('Check Specifications'):
 	have_it = type_Activity.lower() in is_type
 	if is_type == "Wind Turbines":
 		st.write('''
-  Wind Turbine Type:\n
+  Wind Turbine Type: + taula_WT['Wind Turbine']\n
   Prated:+ taula_WT['Prated']\n
-  Angle Transmission:\n
-  Cut-in/Cut-out wind speed:\
-  Operational data:''')
+  Swept area: + taula_WT['Swept area']\n
+  Angle Transmission:+ taula_WT['Angle Transmission']\n
+  Cut-in/Cut-out wind speed:+ taula_WT['Cut-in/Cut-out wind speed']\n
+  Operational data:+ taula_WT['Operational data']''')
 
 	else:
 		# Multiplicacio de un diccionari amb una cadena
